@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End Gear / Dragonflight Season 2</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://db.onlinewebfonts.com/c/ece94713d4ff9a20ca156a1882b51dc2?family=Core+Sans+D+75+Black+W01+Rg"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <script type="text/javascript" src="javascript.js"></script>
+</head>
+<style>
+    /*CONFIG PARA MOBILE*/
+    @media screen and (max-width: 426px) {
+
+        /* Estilos para o cabeçalho no canto superior direito */
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+    width: 105%;
+        }
+
+        /* Estilos para o texto no cabeçalho */
+        .header-text {
+            margin-left: 21px;
+    display: flex;
+    font-size: 21px;
+        }
+
+        /* Estilos para a imagem no cabeçalho */
+        .header-image {
+            width: 30px;
+    height: 30px;
+    margin-left: 41px;
+        }
+
+        /* Estilos para os links de navegação no cabeçalho */
+        .header-links {
+            display: flex;
+    align-items: right;
+    margin-right: 45px;
+        }
+
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 24px;
+            font-size: 14px;
+        }
+
+
+
+        /* Alinhe o cabeçalho com o primeiro cartão */
+        .header-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./img/wow.png');
+            /* Substitua a URL da sua imagem de fundo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        .body-image {
+            width: 750px;
+            /* Ajuste o tamanho conforme necessário */
+            position: absolute;
+            left: 30px;
+            /* Distância da borda esquerda */
+            top: 30px;
+            /* Distância da borda superior */
+            margin-top: 80px;
+        }
+
+        /* Estilo para o container de cartões */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        /* Estilo para os cartões */
+        .card {
+            margin: 20px;
+            background-color: rgba(32, 6, 6, 0.8);
+            /* Fundo transparente */
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            /* Sombra suave */
+            text-align: center;
+            /* Centraliza o texto horizontalmente */
+        }
+
+
+
+        /* Outros estilos para título, descrição e botão */
+        .card h3,
+        .card p,
+        .card-button {
+
+            padding: 10px;
+            margin: -11px;
+            margin-left: -4px;
+            text-align: center;
+            font-size: 15px;
+
+        }
+
+        /* Estilo para as imagens que você deseja girar */
+        .card-image {
+            transform-origin: center;
+            /* Define o ponto de origem da rotação no centro da imagem */
+
+        }
+
+
+        .card-button {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+            /* Espaço acima do botão */
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            color: #fff;
+            width: calc(33.33% - 20px);
+            /* Para ter 3 cartões por linha */
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 2.0s;
+            perspective: 1000px;
+            /* Define a perspectiva para criar o efeito 3D */
+            width: 223px;
+            height: 185px;
+            perspective: 1000px;
+            /* Define a perspectiva para criar o efeito 3D */
+            margin-right: 10px;
+            /* Ajuste a margem direita para definir a distância entre os cartões */
+        }
+
+
+        /* Último cartão não deve ter margem direita */
+        .card:last-child {
+            margin-right: 0;
+        }
+
+        .image-container {
+            width: 85%;
+            height: auto;
+        }
+
+        .default-image,
+        .hover-image {
+            width: 300px;
+            /* Defina a largura desejada, como 100% para preencher a largura do contêiner */
+            height: 169px;
+            /* Mantém a proporção da imagem */
+        }
+
+
+
+        .card-description {
+            text-align: left;
+            /* Alinhe o texto à esquerda */
+            margin-left: 40px;
+            /* Adicione uma margem à esquerda para afastá-lo da borda */
+            margin-left: 40px;
+            font-size: 15px;
+
+        }
+
+        .card img {
+            width: 118%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+
+
+        .card {
+            opacity: 0;
+            /* Começa com opacidade zero */
+            animation: fade-in 1s ease-in-out forwards;
+            /* Animando a opacidade */
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Adicione espaço vazio para a seção "Sobre" */
+        .about-section {
+            color: #fff;
+            height: 1000px;
+            margin-top: 100px;
+            /* Adiciona uma margem superior de 10px */
+            /* Ajuste a altura conforme necessário */
+        }
+
+        /* Estilos para o texto "Sobre nós" */
+        .about-text {
+            text-align: center;
+            /* Alinhando texto no centro */
+            margin-bottom: 30px;
+            /* Adiciona margem inferior de 10px */
+            margin-top: 0px;
+        }
+
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .about-content img {
+            flex: 1;
+            max-width: 59%;
+
+            margin-top: 7px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .about-description {
+            flex: 1;
+            font-family: "Core Sans D 75 Black W01 Rg";
+            margin-right: 10px;
+            max-width: 65rem;
+            font-size: 13px;
+        }
+    
+
+    .segurança {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        margin-top: 39px;
+        font-family: "Core Sans D 75 Black W01 Rg";
+        font-size: 11px;
+        margin-left: -1rem;
+    }
+
+    .coach {
+        width: 100%;
+    margin-top: 39px;
+    font-family: "Core Sans D 75 Black W01 Rg";
+    background: #3339;
+
+    }
+
+    .coluna {
+        flex: 1;
+        padding: 0px 16px;
+    }
+
+    .segurança ul {
+        list-style-type: none;
+        padding: 0;
+        font-size: 11px;
+        margin-right: -6em;
+        margin-left: -4rem;
+
+    }
+
+    .coach h2 {
+
+        justify-content: center;
+        text-align: center;
+        margin-left: -30px;
+
+    }
+
+    .segurança ul {
+        list-style-type: none;
+        padding: 0;
+        margin-right: -5em;
+    }
+
+    .segurança li {
+        margin: 10px 0;
+        margin-left: 31px;
+        margin-top: -22px;
+        margin-bottom: 24px;
+
+    }
+
+    /* Resto dos estilos do cartão permanece o mesmo */
+
+    /* Estilos CSS existentes aqui */
+    /* Estilos para os ícones de contato */
+    .contact-icons img {
+        margin-top: 10px;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 10px;
+        /* Espaço entre os ícones */
+    }
+
+    .contact-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -131px;
+    }
+
+    .contact-icons div {
+        display: flex;
+        /* Alinhe ícones e texto horizontalmente */
+        align-items: center;
+        /* Centralize verticalmente */
+        margin-bottom: 10px;
+        /* Espaço entre os ícones */
+    }
+
+
+    /* Estilos para a seção de contato no meio da tela */
+    .contact-section {
+        height: calc(100vh - 60px);
+        /* 60px é a altura do cabeçalho */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background-color: #f5f5f500;
+        /* Cor de fundo de exemplo */
+        flex-direction: column;
+        /* Alinhe os itens verticalmente */
+    }
+
+    /* Estilos para os textos ao lado dos ícones */
+    .contact-text {
+        margin-right: 10px;
+    }
+
+    /* Resto dos estilos do cartão permanece o mesmo */
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        position: fixed;
+        bottom: -40px;
+        /* Inicialmente fora da tela */
+        width: 100%;
+        transition: bottom 0.3s;
+        /* Adiciona uma transição suave */
+    }}
+    
+</style>
+
+<body>
+    <header>
+        <div class="header-container">
+
+            <img src="img/1.jpeg" alt="header image" class="header-image">
+            <h1 class="header-text">End Gear</h1>
+            <!-- Espaço à esquerda para alinhar com o primeiro cartão -->
+        </div>
+        <div class="header-links">
+            <a href="#about">Sobre nós</a>
+            <a href="#contact">Contato</a>
+        </div>
+    </header>
+    <div class="titulo">
+        <h2>Serviços</h2>
+    </div>
+    <div class="container">
+        <!-- Container para os cartões -->
+        <div class="card">
+            <div class="image-container">
+                <img src="https://wow.zamimg.com/uploads/screenshots/normal/1107960.jpg" alt="Imagem 1"
+                    class="default-image">
+                <img src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/g8/G8RXSZD05I5X1687914780804.jpg"
+                    alt="Outra Imagem" class="hover-image">
+            </div>
+            <h3>Rush de Megadungeon</h3>
+            <a href="megadg.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                target="_blank" class="card-button">Mais Detalhes</a>
+        </div>
+
+        <!-- Outros cartões aqui -->
+
+        <div class="card">
+            <!-- Conteúdo do cartão 2 -->
+            <div class="image-container">
+                <img src="https://uploaddeimagens.com.br/images/004/601/255/full/1120560-inferno-armoredon_%281%29.jpg?1694140792"
+                    alt="Imagem 1" class="default-image">
+                <img src="https://uploaddeimagens.com.br/images/004/601/252/full/1121884-inferno-armoredon.jpg?1694140586"
+                    alt="Outra Imagem" class="hover-image">
+            </div>
+            <h3>Keystone Master Season 2</h3>
+
+            <a href="KSM.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                target="_blank" class="card-button">Mais Detalhes</a>
+        </div>
+
+
+        <div class="card">
+            <!-- Conteúdo do cartão 3 -->
+            <div class="image-container">
+                <img src="img/bau.png" alt="Imagem 1">
+                <img src="https://uploaddeimagens.com.br/images/004/601/417/full/antique-treasure-chest-buried-desert-island-generative-ai_979350-2032_%281%29.jpg?1694178855"
+                    alt="Outra Imagem" class="hover-image">
+            </div>
+            <h3>M+ 20</h3>
+
+            <a href="M+20.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                target="_blank" class="card-button">Mais Detalhes</a>
+        </div>
+
+        <div class="card">
+            <!-- Conteúdo do cartão 4 -->
+            <div class="image-container">
+                <img src="img/bau.png" alt="Imagem 1">
+                <img src="https://uploaddeimagens.com.br/images/004/601/417/full/antique-treasure-chest-buried-desert-island-generative-ai_979350-2032_%281%29.jpg?1694178855"
+                    alt="Outra Imagem" class="hover-image">
+            </div>
+            <h3>M+ 17</h3>
+
+            <a href="M+17.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                target="_blank" class="card-button">Mais Detalhes</a>
+        </div>
+
+        <div class="card">
+            <!-- Conteúdo do cartão 5 -->
+            <div class="image-container">
+                <img src="img/bau.png" alt="Imagem 1">
+                <img src="https://uploaddeimagens.com.br/images/004/601/417/full/antique-treasure-chest-buried-desert-island-generative-ai_979350-2032_%281%29.jpg?1694178855"
+                    alt="Outra Imagem" class="hover-image">
+            </div>
+            <h3>M+ 16</h3>
+
+            <a href="M+16.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                target="_blank" class="card-button">Mais Detalhes</a>
+        </div>
+
+
+    </div>
+    </div>
+    <!-- ... Código anterior ... -->
+
+    <div class="about-section" id="about">
+        <h2 class="about-text">Sobre nós</h2>
+        <div class="about-content">
+            <img src="https://static.icy-veins.com/images/wow/og-images/shadowlands-mythic-season-1.jpg" alt="Sobre">
+            <p class="about-description">Time altamente especializado com experiência no ramo de M+,
+                presente em qualquer horário para nossos clientes, mais de 2
+                anos de experiência no ramo e diversos KSMs e outros serviços concluídos</p>
+        </div>
+        <div class="coach" id="segu">
+
+            <h2 style="font-weight: 100;">End Gear Coach</h2>
+
+            <div class="segurança">
+                <div class="coluna">
+                    <p><span class="icone"><i class="fas fa-shield"></i></span>PRO players no time de suporte</p>
+                    <p><span class="icone"><i class="fas fa-users"></i></span>Nosso próprio time de boost</p>
+                    <p><span class="icone"><i class="fas fa-lock"></i></span>Proteção VPN</p>
+                </div>
+                <div class="coluna">
+                    <p><span class="icone"><i class="fas fa-play"></i></span>Vamos começar o seu pedido assim que
+                        você estiver disponível</p>
+                    <p><span class="icone"><i class="fas fa-gamepad"></i></span>Nós tryhardamos para que você
+                        disfrute do jogo</p>
+                </div>
+                <div class="coluna">
+                    <ul>
+                        <li><span class="check-icon">&#10004;</span> Garantida uma comunicação educada e
+                            profissional com os gerentes da plataforma e dos jogadores envolvidos</li>
+                        <li><span class="check-icon">&#10004;</span> Suporte 24 horas por dia, 7 dias por semana e
+                            resolva quaisquer problemas que possam surgir de forma rápida e profissional</li>
+                        <li><span class="check-icon">&#10004;</span> Os dados pessoais dos clientes estão protegidos
+                        </li>
+                        <li><span class="check-icon">&#10004;</span> Disfrute ao máximo, colaborando conosco!
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ... Resto do código ... -->
+
+
+    <div class="contact-section" id="contact">
+        <!-- Ícones de contato aqui -->
+        <div class="contact-icons">
+            <h2>Entre em contato conosco</h2>
+            <div> <span class="contact-text">Discord</span>
+                <a href="seu-site-aqui" target="_blank">
+                    <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-7-1.png" alt="Discord">
+                </a>
+            </div>
+            <div> <span class="contact-text">WhatsApp</span>
+                <a href="https://wa.me/557799237302" target="_blank">
+                    <img src="https://imagepng.org/whatsapp-icone-icon/whatsapp-icone-2/" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="flex: 1;"></div>
+
+
+
+    <!-- Rodapé (inicialmente oculto) -->
+    <footer id="page-footer">
+        &copy; 2023
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var scrollHeight = document.documentElement.scrollHeight;
+            var scrollTop = window.scrollY;
+            var clientHeight = window.innerHeight;
+
+            // Verifica se o usuário está perto do final da página
+            if (scrollHeight - scrollTop <= clientHeight + 40) {
+                // Mostra o rodapé suavemente
+                document.getElementById('page-footer').style.bottom = '0';
+            } else {
+                // Oculta o rodapé suavemente
+                document.getElementById('page-footer').style.bottom = '-40px';
+            }
+        });
+    </script>
+</body>
+
+</html>
