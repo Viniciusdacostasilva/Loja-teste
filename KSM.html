@@ -14,7 +14,10 @@
     <script type="text/javascript" src="javascript.js"></script>
     <style>
         /* Telas normais */
-
+        b, strong {
+    font-weight: bolder;
+    font-size: 30px;
+}
         .w-100 {
             width: 100% !important;
             height: 29rem;
@@ -383,9 +386,9 @@
 
             .body-container {
                 display: flex;
-    align-items: flex-start;
-    padding: 20px;
-    width: 100%;
+                align-items: flex-start;
+                padding: 20px;
+                width: 100%;
             }
 
             .body-image {
@@ -476,8 +479,8 @@
                 font-size: 24px;
                 margin-bottom: 10px;
                 font-family: "Core Sans D 75 Black W01 Rg";
-    margin-right: -7rem;
-    margin-left: -7rem;
+                margin-right: -7rem;
+                margin-left: -7rem;
             }
 
 
@@ -578,304 +581,304 @@
             }
         }
 
-            /*Ajustes para MOBILE*/
-            @media screen and (max-width:426px) {
+        /*Ajustes para MOBILE*/
+        @media screen and (max-width:426px) {
 
-                .fa-solid,
-                .fas {
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 900;
-                    width: 16px;
-                    margin-right: 7px;
-                }
-
-                .carousel {
-                    position: relative;
-                    width: 201px;
-                    margin-left: -11rem;
-                    margin-top: 2em;
-                }
-
-                .carousel-indicators li {
-                    box-sizing: content-box;
-                    -ms-flex: 0 1 auto;
-                    flex: 0 1 auto;
-                    width: 15px;
-                    height: 3px;
-                    margin-right: 3px;
-                    margin-left: 3px;
-                    text-indent: -999px;
-                    cursor: pointer;
-                    background-color: #fff;
-                    background-clip: padding-box;
-                    border-top: 10px solid transparent;
-                    border-bottom: 10px solid transparent;
-                    opacity: .5;
-                    transition: opacity .6s ease;
-                }
-
-                .w-100 {
-                    width: 100% !important;
-                    height: 15rem;
-                }
-
-                body {
-                    background-image: url('./img/wow.png');
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    margin: 0;
-                    padding: 0;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                    height: 1000px;
-                    /* Ocupará 100% da altura da viewport */
-
-                }
-
-                .header {
-                    background-color: rgba(0, 0, 0, 0.7);
-                    padding: 10px;
-                    color: white;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 100%;
-                }
-
-                .header-text {
-                    margin-left: 33px;
-                }
-
-                .header-image {
-                    width: 30px;
-                    height: 30px;
-                    margin-left: 110px;
-                }
-
-
-                .header-links {
-                    display: flex;
-                }
-
-                .header-links a {
-                    color: white;
-                    text-decoration: none;
-                    margin-right: 40px;
-                }
-
-                .body-container {
-                    display: flex;
-                    align-items: flex-start;
-                    padding: 20px;
-                    width: 100%;
-                    margin-right: auto;
-                }
-
-                .body-image {
-
-                    max-width: 48%;
-                    cursor: pointer;
-                    height: 214px;
-                    margin-top: 84px;
-                }
-
-
-
-                .body-card {
-                    border-radius: 8px;
-                    text-align: right;
-                    padding: 14%;
-                    margin-right: -173px;
-                    color: whitesmoke;
-                    background: rgb(0 0 0 / 80%);
-                    margin-top: -279px;
-                    height: 23.8%;
-                    font-size: 12px;
-                    width: 60%;
-                }
-
-                .button-container {
-                    text-align: center;
-                    margin-top: -2px;
-                    margin-left: -11px;
-                }
-
-                /* Define um fundo verde para o botão */
-                .buy-button {
-                    background-color: #4CAF50;
-                    color: white;
-                    border: none;
-                    padding: 10px 20px;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    font-size: 10px;
-                }
-
-                /* Estiliza a imagem do carrinho de compras */
-                .buy-button img {
-                    width: 18px;
-                    height: 18px;
-                    margin-right: 10px;
-                    vertical-align: middle;
-
-                }
-
-                /* Estiliza o texto "Comprar" */
-                .button-text {
-                    vertical-align: top;
-                    font-size: 12px;
-                }
-
-                .card {
-                    background-color: rgba(32, 6, 6, 0.8);
-                    /* Fundo transparente */
-                    border-radius: 10px;
-                    /* Cantos arredondados */
-                    padding: 20px;
-                    /* Espaçamento interno */
-                    box-shadow: 0px 0px 10px rgba(32, 20, 20, 0.2);
-                    /* Sombra */
-                    max-width: 300px;
-                    /* Largura máxima */
-                    margin: 0 auto;
-                    /* Centralizar na página */
-                }
-
-                .title-container {
-                    text-align: center;
-                }
-
-                /* Estilos adicionais para o texto */
-                .title-container h2 {
-                    font-size: 14px;
-                    margin-bottom: 10px;
-                    font-family: "Core Sans D 75 Black W01 Rg";
-                    margin-top: 21px;
-                    margin-right: 19px;
-                    margin-left: 12px;
-                }
-
-
-
-
-
-                .title-container {
-                    /* Movimenta o texto Despertar do Infinito */
-                    margin-top: -75px;
-                    margin-right: -63px;
-                }
-
-                .title-container p {
-                    margin-top: 6px;
-                    margin-right: 8px;
-                }
-
-
-                .body-description {
-                    color: white;
-                    margin-top: 9px;
-                    margin-left: 38px;
-                }
-
-                .body-description h2 {
-                    font-size: 12px;
-                }
-
-                .body-description p {
-                    font-size: 12px;
-                }
-
-                .body-description ul {
-                    font-size: 12px;
-                }
-
-                .contact-section {
-                    padding: 20px;
-                    border-radius: 10px;
-                    margin-top: -606px;
-                    text-align: center;
-                    width: 10%;
-
-                }
-
-                .contact-icons {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    margin-top: -57px;
-                    color: white;
-                    margin-right: -204px;
-                }
-
-
-                .contact-icons img {
-                    margin-top: 10px;
-                    width: 18px;
-                    height: 18px;
-                    margin-bottom: 10px;
-                }
-
-                .contact-icons div {
-                    margin: 10px;
-                }
-
-
-                .contact-text {
-                    font-weight: 100;
-                    margin-left: 20px;
-                    font-size: 11px;
-                    /* Adiciona um recuo de 20px à esquerda */
-                }
-
-
-                /* Estilos para a mini janela de zoom */
-                .zoom-card {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: rgba(0, 0, 0, 0.9);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    z-index: 999;
-                    opacity: 0;
-                    pointer-events: none;
-                }
-
-                .zoom-card img {
-                    max-width: 90%;
-                    max-height: 90%;
-                    object-fit: contain;
-                }
-
-                .close-button {
-                    position: absolute;
-                    top: 10px;
-                    right: 10px;
-                    cursor: pointer;
-                    color: white;
-                    font-size: 20px;
-                }
-
-                footer {
-                    text-align: center;
-                    padding: 10px;
-                    background-color: #333;
-                    color: #fff;
-                    position: fixed;
-                    bottom: -40px;
-                    /* Inicialmente fora da tela */
-                    width: 100%;
-                    transition: bottom 0.3s;
-                    /* Adiciona uma transição suave */
-                }
+            .fa-solid,
+            .fas {
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                width: 16px;
+                margin-right: 7px;
             }
+
+            .carousel {
+                position: relative;
+                width: 201px;
+                margin-left: -11rem;
+                margin-top: 2em;
+            }
+
+            .carousel-indicators li {
+                box-sizing: content-box;
+                -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+                width: 15px;
+                height: 3px;
+                margin-right: 3px;
+                margin-left: 3px;
+                text-indent: -999px;
+                cursor: pointer;
+                background-color: #fff;
+                background-clip: padding-box;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                opacity: .5;
+                transition: opacity .6s ease;
+            }
+
+            .w-100 {
+                width: 100% !important;
+                height: 15rem;
+            }
+
+            body {
+                background-image: url('./img/wow.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                height: 1000px;
+                /* Ocupará 100% da altura da viewport */
+
+            }
+
+            .header {
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 10px;
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+
+            .header-text {
+                margin-left: 33px;
+            }
+
+            .header-image {
+                width: 30px;
+                height: 30px;
+                margin-left: 110px;
+            }
+
+
+            .header-links {
+                display: flex;
+            }
+
+            .header-links a {
+                color: white;
+                text-decoration: none;
+                margin-right: 40px;
+            }
+
+            .body-container {
+                display: flex;
+                align-items: flex-start;
+                padding: 20px;
+                width: 100%;
+                margin-right: auto;
+            }
+
+            .body-image {
+
+                max-width: 48%;
+                cursor: pointer;
+                height: 214px;
+                margin-top: 84px;
+            }
+
+
+
+            .body-card {
+                border-radius: 8px;
+                text-align: right;
+                padding: 14%;
+                margin-right: -173px;
+                color: whitesmoke;
+                background: rgb(0 0 0 / 80%);
+                margin-top: -279px;
+                height: 23.8%;
+                font-size: 12px;
+                width: 60%;
+            }
+
+            .button-container {
+                text-align: center;
+                margin-top: -2px;
+                margin-left: -11px;
+            }
+
+            /* Define um fundo verde para o botão */
+            .buy-button {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 10px;
+            }
+
+            /* Estiliza a imagem do carrinho de compras */
+            .buy-button img {
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+                vertical-align: middle;
+
+            }
+
+            /* Estiliza o texto "Comprar" */
+            .button-text {
+                vertical-align: top;
+                font-size: 12px;
+            }
+
+            .card {
+                background-color: rgba(32, 6, 6, 0.8);
+                /* Fundo transparente */
+                border-radius: 10px;
+                /* Cantos arredondados */
+                padding: 20px;
+                /* Espaçamento interno */
+                box-shadow: 0px 0px 10px rgba(32, 20, 20, 0.2);
+                /* Sombra */
+                max-width: 300px;
+                /* Largura máxima */
+                margin: 0 auto;
+                /* Centralizar na página */
+            }
+
+            .title-container {
+                text-align: center;
+            }
+
+            /* Estilos adicionais para o texto */
+            .title-container h2 {
+                font-size: 14px;
+                margin-bottom: 10px;
+                font-family: "Core Sans D 75 Black W01 Rg";
+                margin-top: 21px;
+                margin-right: 19px;
+                margin-left: 12px;
+            }
+
+
+
+
+
+            .title-container {
+                /* Movimenta o texto Despertar do Infinito */
+                margin-top: -75px;
+                margin-right: -63px;
+            }
+
+            .title-container p {
+                margin-top: 6px;
+                margin-right: 8px;
+            }
+
+
+            .body-description {
+                color: white;
+                margin-top: 9px;
+                margin-left: 38px;
+            }
+
+            .body-description h2 {
+                font-size: 12px;
+            }
+
+            .body-description p {
+                font-size: 12px;
+            }
+
+            .body-description ul {
+                font-size: 12px;
+            }
+
+            .contact-section {
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: -606px;
+                text-align: center;
+                width: 10%;
+
+            }
+
+            .contact-icons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: -57px;
+                color: white;
+                margin-right: -204px;
+            }
+
+
+            .contact-icons img {
+                margin-top: 10px;
+                width: 18px;
+                height: 18px;
+                margin-bottom: 10px;
+            }
+
+            .contact-icons div {
+                margin: 10px;
+            }
+
+
+            .contact-text {
+                font-weight: 100;
+                margin-left: 20px;
+                font-size: 11px;
+                /* Adiciona um recuo de 20px à esquerda */
+            }
+
+
+            /* Estilos para a mini janela de zoom */
+            .zoom-card {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.9);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 999;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .zoom-card img {
+                max-width: 90%;
+                max-height: 90%;
+                object-fit: contain;
+            }
+
+            .close-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+                color: white;
+                font-size: 20px;
+            }
+
+            footer {
+                text-align: center;
+                padding: 10px;
+                background-color: #333;
+                color: #fff;
+                position: fixed;
+                bottom: -40px;
+                /* Inicialmente fora da tela */
+                width: 100%;
+                transition: bottom 0.3s;
+                /* Adiciona uma transição suave */
+            }
+        }
     </style>
 </head>
 

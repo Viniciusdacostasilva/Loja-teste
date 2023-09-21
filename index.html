@@ -10,43 +10,274 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <script type="text/javascript" src="javascript.js"></script>
+    <script src="https://unpkg.com/scrollreveal">
+        ScrollReveal({ reset: true });
+    </script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
 <style>
+    .textoh2,
+    .segurança,
+    .about-text,
+    .about-content,
+    .duvidas-descriçao h2,
+    .duvidas-descriçao li {
+        visibility: hidden;
+    }
+    .duvidas-descriçao {
+        font-family: "Core Sans D 75 Black W01 Rg";
+        color: white;
+        margin-top: 5rem;
+    }
+
+    .duvidas-descriçao h2 {
+        margin-left: 2rem;
+        color: yellow;
+    }
+
+    .duvidas-descriçao ul {
+        margin-top: 10px;
+        margin-right: 17px;
+    }
+
+    .duvidas-descriçao h2,
+    .duvidas-descriçao li {
+        font-weight: 100;
+        padding: 10px 0;
+    }
+
+    .menu-container {
+        display: none;
+        position: absolute;
+        top: -100%;
+        /* Posição inicial fora da tela */
+        right: 21px;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: transform 1.3s ease-in-out;
+    }
+
+    #menu-toggle.active+.menu-container {
+        top: 127%;
+        /* Mostra o menu container quando o botão é clicado */
+    }
+
+    .menu-toggle-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+        transition: transform 0.3s;
+        position: relative;
+        z-index: 2;
+    }
+
+    #menu-toggle-container {
+        display: flex;
+        align-items: center;
+        /* Centraliza verticalmente */
+    }
+
+
+
+    #menu-container.active {
+        display: block;
+        transform: scaleY(1);
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+
+    header {
+
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        right: 74px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s;
+        top: -9px;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+
+    .menu-items {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-items li {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .menu-items a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+    }
+
+    /* Estilos para o botão hamburguer em telas menores */
+    @media (max-width: 768px) {
+
+        #menu-toggle-container {
+            flex-direction: column;
+            /* Empilha o botão em cima do menu */
+            align-items: flex-start;
+            /* Alinha à esquerda */
+        }
+
+        .menu-toggle.active {
+            transform: rotate(90deg);
+            /* Adicionar rotação ao botão */
+        }
+
+        .menu-container.active {
+            display: block;
+            /* Mostrar o container do menu ao clicar no botão */
+            transform: scaleY(1);
+        }
+    }
+
+
+
+    #voltar-ao-topo {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(176, 204, 235, 0.5);
+        /* Cor de fundo com transparência */
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 13px;
+    }
+
+    /* CONFIG PARA 1366*/
+    @media screen and (max-width: 1366px) {
+        .coach {
+            width: 97%;
+            padding: 20px;
+            margin-top: 39px;
+            font-family: "Core Sans D 75 Black W01 Rg";
+            text-align: center;
+            justify-content: center;
+            margin-left: 0;
+            background: #3339;
+        }
+
+
+    }
+
     /*CONFIG PARA MOBILE*/
     @media screen and (max-width: 426px) {
+        .duvidas-descriçao {
+            font-family: "Core Sans D 75 Black W01 Rg";
+            color: white;
+            margin-top: -11rem;
+        }
+
+        .duvidas-descriçao h2 {
+            margin-left: 2rem;
+            color: yellow;
+        }
+
+        .duvidas-descriçao ul {
+            margin-top: 10px;
+            margin-right: 17px;
+        }
+
+        .duvidas-descriçao h2,
+        .duvidas-descriçao li {
+            font-weight: 100;
+
+            padding: 10px 0;
+        }
+
+        .duvidas-descriçao li {
+            font-size: 12px
+        }
+
+        /*Botão para voltar pro topo*/
+        #voltar-ao-topo {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 50px;
+            background-color: rgba(176, 204, 235, 0.5);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 10px;
+
+        }
 
         /* Estilos para o cabeçalho no canto superior direito */
         header {
             background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    opacity: 0;
-    animation: fade-in 1s ease-in-out forwards;
-    width: 105%;
+            padding: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+            width: 105%;
         }
 
         /* Estilos para o texto no cabeçalho */
         .header-text {
             margin-left: 21px;
-    display: flex;
-    font-size: 21px;
+            display: flex;
+            font-size: 21px;
         }
 
         /* Estilos para a imagem no cabeçalho */
         .header-image {
             width: 30px;
-    height: 30px;
-    margin-left: 41px;
+            height: 30px;
+            margin-left: 41px;
         }
 
         /* Estilos para os links de navegação no cabeçalho */
         .header-links {
             display: flex;
-    align-items: right;
-    margin-right: 45px;
+            align-items: right;
+            margin-right: 45px;
         }
 
         .header-links a {
@@ -55,7 +286,6 @@
             margin-right: 24px;
             font-size: 14px;
         }
-
 
 
         /* Alinhe o cabeçalho com o primeiro cartão */
@@ -75,7 +305,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-image: url('./img/wow.png');
+            background-image: url('https://cutewallpaper.org/27/best-world-of-warcraft-animated-wallpaper/303019161.jpg');
             /* Substitua a URL da sua imagem de fundo */
             background-size: cover;
             background-repeat: no-repeat;
@@ -294,147 +524,168 @@
             max-width: 65rem;
             font-size: 13px;
         }
-    
 
-    .segurança {
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
-        margin: 0 auto;
-        padding: 20px;
-        margin-top: 39px;
-        font-family: "Core Sans D 75 Black W01 Rg";
-        font-size: 11px;
-        margin-left: -1rem;
+
+        .segurança {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 39px;
+            font-family: "Core Sans D 75 Black W01 Rg";
+            font-size: 11px;
+            margin-left: -1rem;
+        }
+
+        .coach {
+            width: 100%;
+            margin-top: 39px;
+            font-family: "Core Sans D 75 Black W01 Rg";
+            background: #3339;
+
+        }
+
+        .coluna {
+            flex: 1;
+            padding: 0px 16px;
+        }
+
+        .segurança ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 11px;
+            margin-right: -6em;
+            margin-left: -4rem;
+
+        }
+
+        .coach h2 {
+
+            justify-content: center;
+            text-align: center;
+            margin-left: -30px;
+
+        }
+
+        .segurança ul {
+            list-style-type: none;
+            padding: 0;
+            margin-right: -5em;
+        }
+
+        .segurança li {
+            margin: 10px 0;
+            margin-left: 31px;
+            margin-top: -22px;
+            margin-bottom: 24px;
+
+        }
+
+        /* Resto dos estilos do cartão permanece o mesmo */
+
+        /* Estilos CSS existentes aqui */
+        /* Estilos para os ícones de contato */
+        .contact-icons img {
+            margin-top: 10px;
+            width: 30px;
+            height: 30px;
+            margin-bottom: 10px;
+            /* Espaço entre os ícones */
+        }
+
+        .contact-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -131px;
+        }
+
+        .contact-icons div {
+            display: flex;
+            /* Alinhe ícones e texto horizontalmente */
+            align-items: center;
+            /* Centralize verticalmente */
+            margin-bottom: 10px;
+            /* Espaço entre os ícones */
+        }
+
+
+        /* Estilos para a seção de contato no meio da tela */
+        .contact-section {
+            height: calc(100vh - 60px);
+            /* 60px é a altura do cabeçalho */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: #f5f5f500;
+            /* Cor de fundo de exemplo */
+            flex-direction: column;
+            /* Alinhe os itens verticalmente */
+        }
+
+        /* Estilos para os textos ao lado dos ícones */
+        .contact-text {
+            margin-right: 10px;
+        }
+
+        /* Resto dos estilos do cartão permanece o mesmo */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: -40px;
+            /* Inicialmente fora da tela */
+            width: 100%;
+            transition: bottom 0.3s;
+            /* Adiciona uma transição suave */
+        }
     }
-
-    .coach {
-        width: 100%;
-    margin-top: 39px;
-    font-family: "Core Sans D 75 Black W01 Rg";
-    background: #3339;
-
-    }
-
-    .coluna {
-        flex: 1;
-        padding: 0px 16px;
-    }
-
-    .segurança ul {
-        list-style-type: none;
-        padding: 0;
-        font-size: 11px;
-        margin-right: -6em;
-        margin-left: -4rem;
-
-    }
-
-    .coach h2 {
-
-        justify-content: center;
-        text-align: center;
-        margin-left: -30px;
-
-    }
-
-    .segurança ul {
-        list-style-type: none;
-        padding: 0;
-        margin-right: -5em;
-    }
-
-    .segurança li {
-        margin: 10px 0;
-        margin-left: 31px;
-        margin-top: -22px;
-        margin-bottom: 24px;
-
-    }
-
-    /* Resto dos estilos do cartão permanece o mesmo */
-
-    /* Estilos CSS existentes aqui */
-    /* Estilos para os ícones de contato */
-    .contact-icons img {
-        margin-top: 10px;
-        width: 30px;
-        height: 30px;
-        margin-bottom: 10px;
-        /* Espaço entre os ícones */
-    }
-
-    .contact-icons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: -131px;
-    }
-
-    .contact-icons div {
-        display: flex;
-        /* Alinhe ícones e texto horizontalmente */
-        align-items: center;
-        /* Centralize verticalmente */
-        margin-bottom: 10px;
-        /* Espaço entre os ícones */
-    }
-
-
-    /* Estilos para a seção de contato no meio da tela */
-    .contact-section {
-        height: calc(100vh - 60px);
-        /* 60px é a altura do cabeçalho */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        background-color: #f5f5f500;
-        /* Cor de fundo de exemplo */
-        flex-direction: column;
-        /* Alinhe os itens verticalmente */
-    }
-
-    /* Estilos para os textos ao lado dos ícones */
-    .contact-text {
-        margin-right: 10px;
-    }
-
-    /* Resto dos estilos do cartão permanece o mesmo */
-    footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #333;
-        color: #fff;
-        position: fixed;
-        bottom: -40px;
-        /* Inicialmente fora da tela */
-        width: 100%;
-        transition: bottom 0.3s;
-        /* Adiciona uma transição suave */
-    }}
-    
 </style>
 
 <body>
+
     <header>
         <div class="header-container">
-
             <img src="img/1.jpeg" alt="header image" class="header-image">
             <h1 class="header-text">End Gear</h1>
-            <!-- Espaço à esquerda para alinhar com o primeiro cartão -->
         </div>
-        <div class="header-links">
-            <a href="#about">Sobre nós</a>
-            <a href="#contact">Contato</a>
+
+
+        <div class="navbar">
+            <div id="menu-toggle-container">
+                <button id="menu-toggle" class="menu-toggle menu-toggle-button">>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+                <div id="menu-container" class="menu-container">
+                    <ul class="menu-items">
+                        <li><a href="#about" style="
+                            margin-right: -1rem;
+                            margin-left: -18px;
+                        ">Sobre nós</a>
+                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#faq">Dúvidas Frequentes</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+
+
     </header>
+    <!-- Resto do seu conteúdo -->
+
+
     <div class="titulo">
         <h2>Serviços</h2>
     </div>
     <div class="container">
         <!-- Container para os cartões -->
-        <div class="card">
+        <div class="card ">
             <div class="image-container">
                 <img src="https://wow.zamimg.com/uploads/screenshots/normal/1107960.jpg" alt="Imagem 1"
                     class="default-image">
@@ -442,13 +693,20 @@
                     alt="Outra Imagem" class="hover-image">
             </div>
             <h3>Rush de Megadungeon</h3>
-            <a href="megadg.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
-                target="_blank" class="card-button">Mais Detalhes</a>
+
+            <div class="" style="
+            display: flex; align-items: center;
+            justify-content: space-between;
+            width: 100%;">
+                <h2 style="margin: 0;margin-left: 1rem;color: white;">R$ 100⁰⁰</h2>
+                <a href="megadg.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                    target="_blank" class="card-button">Mais Detalhes</a>
+            </div>
         </div>
 
         <!-- Outros cartões aqui -->
 
-        <div class="card">
+        <div class="card ">
             <!-- Conteúdo do cartão 2 -->
             <div class="image-container">
                 <img src="https://uploaddeimagens.com.br/images/004/601/255/full/1120560-inferno-armoredon_%281%29.jpg?1694140792"
@@ -458,12 +716,19 @@
             </div>
             <h3>Keystone Master Season 2</h3>
 
-            <a href="KSM.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
-                target="_blank" class="card-button">Mais Detalhes</a>
+            <div class="" style="
+            display: flex; align-items: center;
+            justify-content: space-between;
+            width: 100%;">
+              <h2 style="margin: 0;margin-left: 1rem;color: white;">R$ 200 ⁰⁰</h2>
+                <a href="ksm.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                    target="_blank" class="card-button">Mais Detalhes</a>
+            </div>
         </div>
 
 
-        <div class="card">
+        <div class="card ">
+
             <!-- Conteúdo do cartão 3 -->
             <div class="image-container">
                 <img src="img/bau.png" alt="Imagem 1">
@@ -471,12 +736,18 @@
                     alt="Outra Imagem" class="hover-image">
             </div>
             <h3>M+ 20</h3>
-
-            <a href="M+20.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
-                target="_blank" class="card-button">Mais Detalhes</a>
+            <div class="" style="
+            display: flex; align-items: center;
+            justify-content: space-between;
+            width: 100%;">
+                 <h2 style="margin: 0;margin-left: 1rem;color: white;">R$ 40 ⁰⁰</h2>
+                <a href="M+20.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                    target="_blank" class="card-button">Mais Detalhes</a>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card ">
+
             <!-- Conteúdo do cartão 4 -->
             <div class="image-container">
                 <img src="img/bau.png" alt="Imagem 1">
@@ -485,11 +756,18 @@
             </div>
             <h3>M+ 17</h3>
 
-            <a href="M+17.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
-                target="_blank" class="card-button">Mais Detalhes</a>
+            <div class="" style="
+            display: flex; align-items: center;
+            justify-content: space-between;
+            width: 100%;">
+                 <h2 style="margin: 0;margin-left: 1rem;color: white;">R$ 20 ⁰⁰</h2>
+                <a href="M+17.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                    target="_blank" class="card-button">Mais Detalhes</a>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card ">
+
             <!-- Conteúdo do cartão 5 -->
             <div class="image-container">
                 <img src="img/bau.png" alt="Imagem 1">
@@ -497,9 +775,14 @@
                     alt="Outra Imagem" class="hover-image">
             </div>
             <h3>M+ 16</h3>
-
-            <a href="M+16.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
-                target="_blank" class="card-button">Mais Detalhes</a>
+            <div class="" style="
+            display: flex; align-items: center;
+            justify-content: space-between;
+            width: 100%;">
+                 <h2 style="margin: 0;margin-left: 1rem;color: white;">R$ 15 ⁰⁰</h2>
+                <a href="M+16.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                    target="_blank" class="card-button">Mais Detalhes</a>
+            </div>
         </div>
 
 
@@ -517,7 +800,7 @@
         </div>
         <div class="coach" id="segu">
 
-            <h2 style="font-weight: 100;">End Gear Coach</h2>
+            <h2 class=textoh2 style="font-weight: 100;">End Gear Coach</h2>
 
             <div class="segurança">
                 <div class="coluna">
@@ -548,7 +831,50 @@
 
     </div>
 
+    <div class="Duvidas" id="faq">
+        <div class="duvidas-descriçao">
+            <h2>Dúvidas Frequentes</h2>
+            <ul>
+                <li>
+                    <a>Como funciona o site?</a><br>
+                    Atualmente, o nosso site opera mais como um catálogo que é frequentemente atualizado. Aqui, você
+                    pode se informar sobre os serviços que oferecemos. Se você estiver interessado em comprar algum
+                    serviço, basta entrar em contato via Discord ou WhatsApp. Também oferecemos alguns serviços
+                    personalizados e pacotes que variam de acordo com as semanas e as necessidades dos clientes. Entre
+                    em contato para obter mais informações.
 
+                </li>
+                <li>
+                    <a>Como funciona o serviço de Boosting no WoW?</a><br>
+                    Após efetuar o pedido e o pagamento, nós o executamos conforme solicitado, seja com um jogador de
+                    nossa equipe ou você mesmo jogando. Dessa forma, você economiza tempo, permitindo que você faça as
+                    atividades que mais gosta no jogo, sem a necessidade de lidar com jogadores aleatórios ou qualquer
+                    coisa do tipo. Deixe o trabalho pesado conosco 😊.
+                </li>
+                <li>
+                    <a>Eu quero fazer um pedido grande para mim ou para minha guilda ou amigos, consigo algum
+                        desconto?</a><br>
+                    Claro! Você pode contar com descontos generosos sempre que escolher nossos serviços. Garantimos
+                    segurança e preços acessíveis.
+
+                </li>
+                <li>
+                    <a>Armor Stack e Chaves Específicas:</a><br>
+                    Em todos os nossos serviços, o valor da chave junto com o Armor Stack está incluído... (não
+                    aplicável para o início da temporada).
+                    Armor Stack é simplesmente a maior quantidade de pessoas com o mesmo tipo de armadura no mesmo
+                    grupo. No caso de placas e couro, serão 5 jogadores em uma M+, enquanto tecido e malha serão apenas
+                    4, já que, até o momento, não existem tanques de tecido ou malha.
+                </li>
+                <li>
+                    <a>Quais métodos de pagamento vocês aceitam?</a><br>
+                    Trabalhamos com a plataforma do Mercado Pago, portanto, aceitamos cartões de crédito ou débito,
+                    assim como PIX.
+                </li>
+
+            </ul>
+        </div>
+    </div>
     <!-- ... Resto do código ... -->
 
 
@@ -577,6 +903,28 @@
         &copy; 2023
     </footer>
 
+    <button id="voltar-ao-topo"><span class="material-symbols-outlined">
+            stat_2
+        </span></button> <!-- Ícone de seta para cima -->
+
+    <script>
+        const button = document.getElementById('voltar-ao-topo');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        });
+
+        button.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+    </script>
+
+
     <script>
         window.addEventListener('scroll', function () {
             var scrollHeight = document.documentElement.scrollHeight;
@@ -593,6 +941,53 @@
             }
         });
     </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll(".card");
+
+            cards.forEach((card, index) => {
+                setTimeout(function () {
+                    card.classList.add("show");
+                }, (index + 1) * 250); // Atraso de 1 segundo para cada cartão (ajuste conforme desejado)
+            });
+        });
+    </script>
+
+
+    <script>
+        // Animações de scroll na parte do SOBRE NÒS
+        ScrollReveal().reveal('.about-text', { delay: 750 });
+        ScrollReveal().reveal('.about-content', { delay: 1000 });
+        ScrollReveal().reveal('about-description', { delay: 1250 });
+        // Animações de scroll na parte da segurança
+        ScrollReveal().reveal('.coach', { delay: 750 });
+        ScrollReveal().reveal('.textoh2', { delay: 1000 });
+        ScrollReveal().reveal('.segurança', { delay: 1250 });
+        // Animações de scroll na parte das dúvidas
+        ScrollReveal().reveal('.duvidas-descriçao h2', { delay: 750 });
+        ScrollReveal().reveal('.duvidas-descriçao li', { delay: 1000 });
+
+
+    </script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const menuContainer = document.getElementById("menu-container");
+
+            menuToggle.addEventListener("click", function () {
+                menuToggle.classList.toggle("active"); // Alternar classe para animação do botão
+                menuContainer.classList.toggle("active"); // Alternar classe para mostrar/ocultar o menu
+            });
+        });
+
+    </script>
+
+
 </body>
 
 </html>
