@@ -204,8 +204,32 @@ body {
 }
 
 .image-container {
+    overflow: hidden;
+}
+
+.default-image {
     width: 100%;
     height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .default-image {
+    transform: scale(1.2); /* Aumenta a escala da imagem ao passar o mouse */
+}
+
+.card:hover .default-image.zoomed-in {
+    animation: zoom-and-move 0.3s ease;
+    transform-origin: center center;
+}
+
+@keyframes zoom-and-move {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.5) translate(-10%, -10%);
+    }
 }
 
 .default-image,

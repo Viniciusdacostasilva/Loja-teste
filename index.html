@@ -56,12 +56,9 @@
     }
 
     .menu-container {
-        display: none;
+        display: flex;
         position: absolute;
-        top: -100%;
-        /* Posição inicial fora da tela */
-        right: 21px;
-        background-color: rgba(0, 0, 0, 0.8);
+        margin-left: -26rem;
         transition: transform 1.3s ease-in-out;
     }
 
@@ -131,6 +128,7 @@
     }
 
     .bar {
+        display: none;
         width: 30px;
         height: 3px;
         background-color: #fff;
@@ -142,6 +140,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        display: flex
     }
 
     .menu-items li {
@@ -153,7 +152,63 @@
         text-decoration: none;
         color: #fff;
         display: block;
+        font-size: 18px;
+        margin-right: 0rem;
+        margin-left: -2rem;
+        padding: 7px;
     }
+
+
+    #voltar-ao-topo {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(176, 204, 235, 0.5);
+        /* Cor de fundo com transparência */
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 13px;
+    }
+
+
+    /* Estilos para resoluções maiores (com sublinhado e animação) */
+    @media (min-width: 768px) {
+
+        /* Estilize os links dentro da lista */
+        .menu-items li a {
+            text-decoration: none;
+            /* Remova o sublinhado padrão dos links */
+            position: relative;
+            /* Para criar espaço para o sublinhado */
+            transition: all 1.3s ease;
+            /* Adicione uma transição suave de 0.3 segundos */
+        }
+
+        /* Estilize o sublinhado quando o mouse passar sobre o link */
+        .menu-items li a:hover::after {
+            content: "";
+            /* Adicione um pseudo-elemento para criar o sublinhado */
+            position: absolute;
+            /* Posicione o sublinhado de forma absoluta */
+            width: 100%;
+            /* Defina a largura do sublinhado como 100% do link */
+            height: 2px;
+            /* Defina a altura do sublinhado */
+            background-color: white;
+            /* Cor do sublinhado (pode ser personalizada) */
+            bottom: -5px;
+            /* Posicione o sublinhado abaixo do texto */
+            left: 0;
+            /* Alinhe o sublinhado com o texto */
+        }
+
+        /* Estilize o sublinhado quando o mouse passar sobre o link */
+
+    }
+
 
     /* Estilos para o botão hamburguer em telas menores */
     @media (max-width: 768px) {
@@ -178,21 +233,6 @@
     }
 
 
-
-    #voltar-ao-topo {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: rgba(176, 204, 235, 0.5);
-        /* Cor de fundo com transparência */
-        color: #fff;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        padding: 13px;
-    }
-
     /* CONFIG PARA 1366*/
     @media screen and (max-width: 1366px) {
         .coach {
@@ -215,11 +255,70 @@
             justify-content: center;
         }
 
-
     }
 
     /*CONFIG PARA MOBILE*/
     @media screen and (max-width: 426px) {
+        /* Estilize os links dentro da lista */
+
+        .menu-items a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            margin-right: -2rem;
+
+        }
+
+        .menu-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: block;
+            height: 18.6rem;
+        }
+
+        .menu-container {
+            display: none;
+            position: absolute;
+            top: -100%;
+            margin-top: -2px;
+            right: 31px;
+            width: 9rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: transform 1.3s ease-in-out;
+        }
+
+        .bar {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        .image-container {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .default-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .default-image {
+            transform: scale(1.2);
+            /* Aumenta a escala da imagem ao passar o mouse */
+        }
+
+        .card:hover .default-image.zoomed-in {
+            animation: zoom-and-move 0.3s ease;
+            transform-origin: center center;
+        }
+
 
         .cartexto {
             margin: 2px;
@@ -374,7 +473,7 @@
         .card p,
         .card-button {
 
-            padding: 10px;
+            padding: 13px;
             margin: -11px;
             margin-left: -4px;
             text-align: center;
@@ -452,10 +551,7 @@
             margin-right: 0;
         }
 
-        .image-container {
-            width: 85%;
-            height: auto;
-        }
+
 
         .default-image,
         .hover-image {
@@ -478,7 +574,7 @@
         }
 
         .card img {
-            width: 118%;
+            width: 100%;
             height: auto;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
@@ -678,7 +774,6 @@
             <h1 class="header-text">End Gear</h1>
         </div>
 
-
         <div class="navbar">
             <div id="menu-toggle-container">
                 <button id="menu-toggle" class="menu-toggle menu-toggle-button">>
@@ -688,10 +783,7 @@
                 </button>
                 <div id="menu-container" class="menu-container">
                     <ul class="menu-items">
-                        <li><a href="#about" style="
-                            margin-right: -1rem;
-                            margin-left: -18px;
-                        ">Sobre nós</a>
+                        <li><a href="#about">Sobre nós</a>
                         <li><a href="#contact">Contato</a></li>
                         <li><a href="#faq">Dúvidas Frequentes</a></li>
                     </ul>
@@ -707,14 +799,14 @@
     <div class="titulo">
         <h2>Serviços</h2>
     </div>
+
     <div class="container">
         <!-- Container para os cartões -->
         <div class="card ">
             <div class="image-container">
                 <img src="https://wow.zamimg.com/uploads/screenshots/normal/1107960.jpg" alt="Imagem 1"
                     class="default-image">
-                <img src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/g8/G8RXSZD05I5X1687914780804.jpg"
-                    alt="Outra Imagem" class="hover-image">
+
             </div>
             <h3>Rush de Megadungeon</h3>
 
@@ -735,8 +827,7 @@
             <div class="image-container">
                 <img src="https://uploaddeimagens.com.br/images/004/601/255/full/1120560-inferno-armoredon_%281%29.jpg?1694140792"
                     alt="Imagem 1" class="default-image">
-                <img src="https://uploaddeimagens.com.br/images/004/601/252/full/1121884-inferno-armoredon.jpg?1694140586"
-                    alt="Outra Imagem" class="hover-image">
+
             </div>
             <h3>Keystone Master Season 2</h3>
 
@@ -755,9 +846,8 @@
 
             <!-- Conteúdo do cartão 3 -->
             <div class="image-container">
-                <img src="img/bau.png" alt="Imagem 1">
-                <img src="https://uploaddeimagens.com.br/images/004/601/417/full/antique-treasure-chest-buried-desert-island-generative-ai_979350-2032_%281%29.jpg?1694178855"
-                    alt="Outra Imagem" class="hover-image">
+                <img src="img/bau.png" alt="Imagem 1" class="default-image">
+
             </div>
             <h3>M+ 20</h3>
             <div class="" style="
@@ -774,9 +864,8 @@
 
             <!-- Conteúdo do cartão 4 -->
             <div class="image-container">
-                <img src="img/bau.png" alt="Imagem 1">
-                <img src="https://uploaddeimagens.com.br/images/004/601/417/full/antique-treasure-chest-buried-desert-island-generative-ai_979350-2032_%281%29.jpg?1694178855"
-                    alt="Outra Imagem" class="hover-image">
+                <img src="img/bau.png" alt="Imagem 1" class="default-image">
+
             </div>
             <h3>M+ 17</h3>
 
@@ -794,9 +883,8 @@
 
             <!-- Conteúdo do cartão 5 -->
             <div class="image-container">
-                <img src="img/bau.png" alt="Imagem 1">
-                <img src="https://uploaddeimagens.com.br/images/004/601/417/full/antique-treasure-chest-buried-desert-island-generative-ai_979350-2032_%281%29.jpg?1694178855"
-                    alt="Outra Imagem" class="hover-image">
+                <img src="img/bau.png" alt="Imagem 1" class="default-image">
+
             </div>
             <h3>M+ 16</h3>
             <div class="" style="
@@ -819,7 +907,8 @@
         <div class="about-content">
             <img src="https://static.icy-veins.com/images/wow/og-images/shadowlands-mythic-season-1.jpg" alt="Sobre">
             <p class="about-description"> Somos um grupo de jogadores veteranos de World of Warcraft que não apenas amam
-                o jogo, mas também têm uma profunda compreensão das M+. Nossa equipe é composta por jogadores talentosos e dedicados
+                o jogo, mas também têm uma profunda compreensão das M+. Nossa equipe é composta por jogadores talentosos
+                e dedicados
                 , muitos dos quais têm anos de experiência no mais alto nível de jogabilidade.</p>
 
         </div>
@@ -932,6 +1021,8 @@
             stat_2
         </span></button> <!-- Ícone de seta para cima -->
 
+
+    <!---Código para botão de voltar ao início-->
     <script>
         const button = document.getElementById('voltar-ao-topo');
 
@@ -949,7 +1040,7 @@
 
     </script>
 
-
+    <!---Código para transição de rodapé/footer-->
     <script>
         window.addEventListener('scroll', function () {
             var scrollHeight = document.documentElement.scrollHeight;
@@ -967,7 +1058,7 @@
         });
     </script>
 
-
+    <!---Código para transição dos cartões-->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cards = document.querySelectorAll(".card");
@@ -998,7 +1089,7 @@
     </script>
 
 
-
+    <!---Código para animação do botao hamburguer-->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const menuToggle = document.getElementById("menu-toggle");
@@ -1012,6 +1103,20 @@
 
     </script>
 
+    <!---Código para transição no scroll-->
+    <script>
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector(".scroll-header");
+
+            if (window.scrollY > 100) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+
+
+    </script>
 
 </body>
 
