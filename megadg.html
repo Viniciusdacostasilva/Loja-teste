@@ -10,24 +10,22 @@
     <link href="https://db.onlinewebfonts.com/c/aba1a083bf50980a05f0265179103a09?family=DIN+Next+LT+Arabic+Medium"
         rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/1.jpeg" />
     <script type="text/javascript" src="javascript.js"></script>
     <style>
         /* Telas normais */
-
-        .textop {
-            color: #11f011;
-            text-align: center;
-            font-size: 20px;
-            margin-top: 10px;
+        .charutodecarne {
+            justify-content: space-between;
+            width: 100%;
         }
 
         b,
+        .textop,
         strong {
             font-weight: bolder;
             font-size: 30px;
+            color: #11f011;
         }
 
         .w-100 {
@@ -37,10 +35,9 @@
 
         .carousel {
             position: relative;
-            width: 784px;
-            margin-left: -47rem;
+            width: 50%;
+            margin-left: 0;
             margin-top: 2em;
-
         }
 
         /* Adicione um estilo ao container do carrossel */
@@ -109,7 +106,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            height: 1000px;
+            height: 1052px;
             /* Ocupará 100% da altura da viewport */
 
         }
@@ -152,8 +149,8 @@
             align-items: flex-start;
             padding: 20px;
             width: 100%;
-
         }
+
 
         .body-image {
             max-width: 60%;
@@ -168,16 +165,17 @@
 
 
         .body-card {
-            border-radius: 8px;
             text-align: right;
             padding: 12%;
-            margin-right: -764px;
             color: whitesmoke;
             background: rgb(0 0 0 / 52%);
             margin-top: -31.5em;
             height: 12.24cm;
-            width: 49.6%;
+            width: 50%;
+            position: absolute;
+            right: 0;
         }
+
 
 
         /* Define um fundo verde para o botão */
@@ -239,12 +237,13 @@
         }
 
         /* Estilos adicionais para o texto */
+
         .title-container h2 {
             font-size: 24px;
             margin-bottom: 10px;
             font-family: "Core Sans D 75 Black W01 Rg";
-            ;
         }
+
 
 
 
@@ -256,16 +255,19 @@
 
         .title-container p {
             /* Movimenta o texto Despertar do Infinito */
-            margin-top: 30px;
+            margin-top: 50px;
 
         }
+
 
         .body-description {
             color: white;
             text-align: left;
-            margin-top: 102px;
-            margin-left: -330px;
+            margin-top: 1rem;
+            margin-left: -21rem;
+            position: relative;
         }
+
 
         .contact-section {
             padding: 20px;
@@ -281,9 +283,9 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-top: -103px;
-            margin-right: -788px;
             color: white;
+            position: relative;
+            margin-top: 1rem;
         }
 
         .contact-icons div {
@@ -346,19 +348,14 @@
 
         /* Estilos para telas menores (exemplo: 1366x768) */
         @media screen and (max-width: 1366px) {
+
             .carousel {
                 position: relative;
-                width: 734px;
-                margin-left: -42rem;
+                width: 50%;
+                margin-left: 0;
                 margin-top: 2em;
             }
 
-            .textop {
-                color: #11f011;
-                text-align: center;
-                font-size: 20px;
-                margin-top: 10px;
-            }
 
             body {
                 background-image: url('https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/pp/PPO0Y0LSY2WJ1693945263556.png');
@@ -421,15 +418,16 @@
             }
 
             .body-card {
-                border-radius: 8px;
+                border-radius: 0;
                 text-align: right;
                 padding: 14%;
-                margin-right: -680px;
+                margin-right: 0;
                 color: whitesmoke;
                 background: rgb(0 0 0 / 52%);
                 margin-top: -31.5rem;
                 height: 29.03rem;
             }
+
 
             .button-container {
                 text-align: center;
@@ -489,12 +487,20 @@
 
             .title-container {
                 text-align: center;
+
+                margin-top: -159px;
+                margin-right: 15px;
+
             }
+
 
             /* Estilos adicionais para o texto */
             .title-container h2 {
                 font-size: 24px;
                 margin-bottom: 10px;
+                font-family: "Core Sans D 75 Black W01 Rg";
+                margin-right: -7rem;
+                margin-left: -7rem;
             }
 
 
@@ -512,15 +518,14 @@
 
             }
 
-            .body-description {
 
+            .body-description {
                 color: white;
                 text-align: left;
-                margin-top: 65px;
-                margin-left: -189px;
+                margin-top: 1rem;
+                margin-left: -11rem;
+                height: 26rem;
             }
-
-
 
             .contact-section {
                 padding: 20px;
@@ -536,8 +541,8 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                margin-top: -98px;
-                margin-right: -702px;
+                margin-top: 2rem;
+                margin-right: 0;
                 color: white;
             }
 
@@ -601,11 +606,18 @@
         /*Ajustes para MOBILE*/
         @media screen and (max-width:426px) {
 
-            .textop {
-                color: #11f011;
-                text-align: center;
-                font-size: 20px;
-                margin-top: -10px;
+            b,
+            .textop,
+            strong {
+                font-weight: bolder;
+                font-size: 30px;
+                color: rgb(2, 207, 2);
+                margin-left: -1rem;
+            }
+
+            .charutodecarne {
+                justify-content: space-between;
+                width: 100%;
             }
 
             .fa-solid,
@@ -616,12 +628,15 @@
                 margin-right: 7px;
             }
 
+
             .carousel {
                 position: relative;
-                width: 201px;
-                margin-left: -13rem;
+                width: 50%;
+                margin-left: 0;
                 margin-top: 2em;
             }
+
+
 
             .carousel-indicators li {
                 box-sizing: content-box;
@@ -712,22 +727,22 @@
 
 
             .body-card {
-                border-radius: 8px;
+                border-radius: 0px;
                 text-align: right;
-                padding: 14%;
-                margin-right: -173px;
+                padding: 12%;
                 color: whitesmoke;
                 background: rgb(0 0 0 / 52%);
-                margin-top: -279px;
-                height: 23.8%;
-                font-size: 12px;
-                width: 60%;
+                margin-top: -17.5em;
+                height: 15rem;
+                width: 50%;
+                position: absolute;
+                margin-right: 0;
             }
 
             .button-container {
                 text-align: center;
-                margin-top: 13px;
-                margin-left: -2px;
+                margin-top: 1rem;
+                margin-left: -2rem;
             }
 
             /* Define um fundo verde para o botão */
@@ -780,10 +795,12 @@
                 font-size: 14px;
                 margin-bottom: 10px;
                 font-family: "Core Sans D 75 Black W01 Rg";
-                margin-top: 21px;
-                margin-right: 10px;
-
+                margin-top: 2rem;
+                margin-right: 2rem;
+                margin-left: -1rem;
             }
+
+
 
 
 
@@ -795,7 +812,9 @@
 
             .title-container p {
                 margin-top: 6px;
-                margin-right: 8px;
+                margin-right: 2rem;
+                font-size: 11px;
+                margin-left: 0rem;
             }
 
 
@@ -831,9 +850,9 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                margin-top: -47px;
+                margin-top: -0.5rem;
                 color: white;
-                margin-right: -204px;
+                margin-right: 3rem;
             }
 
 
@@ -916,79 +935,91 @@
     </header>
 
     <!-- Carousel de 2 imagens -->
+    <div class="charutodecarne">
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1" class></li>
 
-        </ol>
-        <div class="carousel-inner">
-            <!-- Substitua as imagens e os slides abaixo com o seu código HTML existente -->
-            <div class="carousel-item active">
-                <img class="d-block w-100"
-                    src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/D2CXQGJLSOIF1687987568173.jpg"
-                    alt="Primeiro slide">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1" class></li>
+
+            </ol>
+            <div class="carousel-inner">
+                <!-- Substitua as imagens e os slides abaixo com o seu código HTML existente -->
+                <div class="carousel-item active">
+                    <img class="d-block w-100"
+                        src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/D2CXQGJLSOIF1687987568173.jpg"
+                        alt="Primeiro slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/g8/G8RXSZD05I5X1687914780804.jpg"
+                        alt="Segundo slide">
+                </div>
+
+                <!-- Fim do código HTML existente -->
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100"
-                    src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/g8/G8RXSZD05I5X1687914780804.jpg"
-                    alt="Segundo slide">
-            </div>
-
-            <!-- Fim do código HTML existente -->
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-        </a>
-    </div>
-
-    <div class="body-container">
-
-    </div>
-
-<!----Preços e ETC !-->
-    <div class="body-card">
-        <div class="title-container" style="
-            font-family: &quot;Core Sans D 75 Black W01 Rg&quot;;">
-            <h2>Despertar do Infinito (MITICO) - WOW BOOST</h2>
-            <p style="text-align:center ;">Caminho mais
-                fácil para se equipar atualmente</p>
-            <p style="text-align:center;">Melhor Custo
-                Benefício</p>
-            <h3 class="textop"><strong>R$100,00</strong></h3>
-            <div class="button-container">
-                <a href="seu-link-aqui" class="buy-button" style="text-decoration: none;">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="button-text">Comprar</span>
-                </a>
-            </div>
-
-        </div>
-
-        <!----Contatos !-->
-    </div>
-    <div class="contact-icons">
-        <div>
-            <span class="contact-text">Discord</span>
-            <a href="seu-site-aqui" target="_blank">
-                <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-7-1.png" alt="Discord">
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
             </a>
-            <span class="contact-text">WhatsApp</span>
-            <a href="https://wa.me/557799237302" target="_blank">
-                <img src="https://imagepng.org/whatsapp-icone-icon/whatsapp-icone-2/" alt="WhatsApp">
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
             </a>
         </div>
+
+        <div class="body-container">
+
+        </div>
+
+        <div class="body-card">
+            <div class="title-container" style="
+                font-family: &quot;Core Sans D 75 Black W01 Rg&quot;;">
+                <h2>Despertar do Infinito (MITICO) - WOW BOOST</h2>
+                <p style="text-align:center ;">Caminho mais
+                    fácil para se equipar atualmente</p>
+                <p style="text-align:center;">Melhor Custo
+                    Benefício</p>
+                <h3 class="textop"><strong>R$100,00</strong></h3>
+                <div class="button-container">
+                    <a href="seu-link-aqui" class="buy-button" style="text-decoration: none;">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="button-text">Comprar</span>
+                    </a>
+                </div>
+
+                <div class="contact-icons">
+                    <div>
+                        <span class="contact-text">Discord</span>
+                        <a href="seu-site-aqui" target="_blank">
+                            <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-7-1.png"
+                                alt="Discord">
+                        </a>
+                        <span class="contact-text">WhatsApp</span>
+                        <a href="https://wa.me/557799237302" target="_blank">
+                            <img src="https://imagepng.org/whatsapp-icone-icon/whatsapp-icone-2/" alt="WhatsApp">
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+
     </div>
 
-<!----Descrição !-->
+
     <div class="body-description" style="
-        font-family: &quot;Core Sans D 75 Black W01 Rg&quot;;">
+    font-family: &quot;Core Sans D 75 Black W01 Rg&quot;;">
         <h2 style=" font-family: Core Sans D 75 Black W01 Rg;">Descrição</h2>
         <p>Despertar do Infinito (MITICO) - WOW BOOST - Blizzard</p>
         <ul>
@@ -1025,7 +1056,6 @@
             </li>
         </ul>
     </div>
-
 
     <div class="contact-section" id="contact">
         <!-- Ícones de contato aqui -->
