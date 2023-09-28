@@ -12,7 +12,7 @@ image2.addEventListener("mouseleave", () => {
 });
 
 
-
+/*Efeito de zoom ao passar o mouse na iamgem*/
 const defaultImage = document.querySelector(".default-image");
 
 defaultImage.addEventListener("mousemove", (e) => {
