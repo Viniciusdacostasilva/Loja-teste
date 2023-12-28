@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>End Gear / Dragonflight Season 2</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link href="https://db.onlinewebfonts.com/c/ece94713d4ff9a20ca156a1882b51dc2?family=Core+Sans+D+75+Black+W01+Rg"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    <script type="text/javascript" src="javascript.js"></script>
-    <script src="https://unpkg.com/scrollreveal">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>End Gear M+ Services</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link
+            href="https://db.onlinewebfonts.com/c/ece94713d4ff9a20ca156a1882b51dc2?family=Core+Sans+D+75+Black+W01+Rg"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+        <script type="text/javascript" src="/js/javascript.js"></script>
+        <script src="https://unpkg.com/scrollreveal">
         ScrollReveal({ reset: true });
+
     </script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="icon" type="image/x-icon"
-        href="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045" />
-</head>
-<style>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="icon" type="image/x-icon"
+            href="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045" />
+    </head>
+    <style>
+    .coach {
+        width: 97%;
+        padding: 20px;
+        margin-top: 20rem;
+        font-family: "Core Sans D 75 Black W01 Rg";
+        text-align: center;
+        justify-content: center;
+        margin-left: 0;
+        background: #3339;
+        color: white;
+    }
+
     .faq-item {
         margin-bottom: 0px;
     }
 
     .faq-button {
         cursor: pointer;
-        background-color: grey;
+        background-color: #8080808a;
         border: none;
         padding: 10px;
         color: white;
@@ -33,6 +48,12 @@
         font-size: 16px;
         text-align: left;
         font-family: "Core Sans D 75 Black W01 Rg";
+        transition: all 0.35s ease-in-out;
+
+    }
+
+    .faq-item:first-child .faq-answer {
+        display: block;
     }
 
     .faq-answer {
@@ -40,6 +61,13 @@
         padding: 10px;
         background-color: #00000063;
         font-family: "Core Sans D 75 Black W01 Rg";
+        transition: all 0.35s ease-in-out;
+
+    }
+
+    /* Estilo CSS para quando o botão está ativo */
+    .faq-item[data-active] .faq-button {
+        background-color: #8080808a;
     }
 
     .cartexto {
@@ -65,7 +93,7 @@
 
     .duvidas-descriçao h2 {
         margin-left: 2rem;
-        color: yellow;
+        color: #00caff;
     }
 
     .duvidas-descriçao ul {
@@ -98,13 +126,27 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
+
         background-color: transparent;
         border: none;
         padding: 5px;
         transition: transform 0.3s;
         position: relative;
         z-index: 2;
+    }
+
+    .menu-toggle {
+        right: 0;
+
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s;
+        top: -5rem;
     }
 
     #menu-toggle-container {
@@ -139,19 +181,7 @@
         position: relative;
     }
 
-    .menu-toggle {
-        right: 74px;
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-        padding: 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s;
-        top: -9px;
-    }
+
 
     .bar {
         display: none;
@@ -203,6 +233,7 @@
     /* Estilos para resoluções maiores (com sublinhado e animação) */
     @media (min-width: 768px) {
 
+    
         /* Estilize os links dentro da lista */
         .menu-items li a {
             text-decoration: none;
@@ -256,6 +287,34 @@
             /* Mostrar o container do menu ao clicar no botão */
             transform: scaleY(1);
         }
+
+        .menu-toggle-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            transition: transform 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-toggle {
+            right: 74px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            top: -9px;
+        }
     }
 
 
@@ -264,9 +323,10 @@
         .coach {
             width: 97%;
             padding: 20px;
-            margin-top: 39px;
+            margin-top: 140px;
             font-family: "Core Sans D 75 Black W01 Rg";
             text-align: center;
+            color: white;
             justify-content: center;
             margin-left: 0;
             background: #3339;
@@ -281,11 +341,66 @@
             justify-content: center;
         }
 
+        .menu-toggle-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            transition: transform 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-toggle {
+            right: 74px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            top: -9px;
+        }
     }
 
     /*CONFIG PARA MOBILE*/
-    @media screen and (max-width: 766px) {
+    @media screen and (max-width: 768px) {
+
         /* Estilize os links dentro da lista */
+        .menu-toggle-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            transition: transform 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-toggle {
+            right: 74px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            top: -9px;
+        }
 
         .menu-items a {
             text-decoration: none;
@@ -628,7 +743,7 @@
         /* Adicione espaço vazio para a seção "Sobre" */
         .about-section {
             color: #fff;
-            height: 1000px;
+            height: 600px;
             margin-top: 100px;
             /* Adiciona uma margem superior de 10px */
             /* Ajuste a altura conforme necessário */
@@ -686,7 +801,9 @@
 
         .coach {
             width: 100%;
-            margin-top: 39px;
+            margin-top: 140px;
+            color: white;
+
             font-family: "Core Sans D 75 Black W01 Rg";
             background: #3339;
 
@@ -769,6 +886,7 @@
             /* Cor de fundo de exemplo */
             flex-direction: column;
             /* Alinhe os itens verticalmente */
+            margin-top: 4rem;
         }
 
         /* Estilos para os textos ao lado dos ícones */
@@ -792,281 +910,330 @@
     }
 </style>
 
-<body>
+    <body>
 
-    <header>
-        <div class="header-container">
-            <img src="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045"
-                alt="header image" class="header-image">
-            <h1 class="header-text">End Gear</h1>
-        </div>
+        <header>
+            <div class="header-container">
+                <img
+                    src="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045"
+                    alt="header image" class="header-image">
+                <h1 class="header-text">End Gear</h1>
+            </div>
 
-        <div class="navbar">
-            <div id="menu-toggle-container">
-                <button id="menu-toggle" class="menu-toggle menu-toggle-button">>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </button>
-                <div id="menu-container" class="menu-container">
-                    <ul class="menu-items">
-                        <li><a href="#about">Sobre nós</a>
-                        <li><a href="#contact">Contato</a></li>
-                        <li><a href="#faq">Dúvidas Frequentes</a></li>
-                    </ul>
+            <div class="navbar">
+                <div id="menu-toggle-container">
+                    <button id="menu-toggle"
+                        class="menu-toggle menu-toggle-button">>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </button>
+                    <div id="menu-container" class="menu-container">
+                        <ul class="menu-items">
+                            <li><a href="#about">Sobre nós</a>
+                                <li><a href="#faq">Dúvidas Frequentes</a></li>
+                                <li><a href="#contact">Contato</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+            </header>
+            <!-- Resto do seu conteúdo -->
+
+            <div class="titulo">
+                <h2>Serviços</h2>
             </div>
-        </div>
 
+            <div class="container">
+                <!-- Container para os cartões -->
+                <div class="card ">
+                    <div class="image-container">
+                        <img
+                            src="https://wow.zamimg.com/uploads/screenshots/normal/1107960.jpg"
+                            alt="Imagem 1"
+                            class="default-image">
 
-    </header>
-    <!-- Resto do seu conteúdo -->
+                    </div>
+                    <h3>Rush de Megadungeon</h3>
 
-
-    <div class="titulo">
-        <h2>Serviços</h2>
-    </div>
-
-    <div class="container">
-        <!-- Container para os cartões -->
-        <div class="card ">
-            <div class="image-container">
-                <img src="https://wow.zamimg.com/uploads/screenshots/normal/1107960.jpg" alt="Imagem 1"
-                    class="default-image">
-
-            </div>
-            <h3>Rush de Megadungeon</h3>
-
-            <div class="" style="
+                    <div class style="
             display: flex; align-items: center;
             justify-content: space-between;
             width: 100%;">
-                <h2 class="cartexto">R$ 100 ⁰⁰</h2>
-                <a href="megadg.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
-                    target="_blank" class="card-button">Mais Detalhes</a>
-            </div>
-        </div>
+                        <h2 class="cartexto">R$ 100 ⁰⁰</h2>
+                        <a href="megadg.html"
+                            style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                            target="_blank" class="card-button">Mais Detalhes</a>
+                    </div>
+                </div>
 
-        <!-- Outros cartões aqui -->
+                <!-- Outros cartões aqui -->
 
-        <div class="card ">
-            <!-- Conteúdo do cartão 2 -->
-            <div class="image-container">
-                <img src="https://uploaddeimagens.com.br/images/004/601/255/full/1120560-inferno-armoredon_%281%29.jpg?1694140792"
-                    alt="Imagem 1" class="default-image">
+                <div class="card ">
+                    <!-- Conteúdo do cartão 2 -->
+                    <div class="image-container">
+                        <img
+                            src="https://uploaddeimagens.com.br/images/004/601/255/full/1120560-inferno-armoredon_%281%29.jpg?1694140792"
+                            alt="Imagem 1" class="default-image">
 
-            </div>
-            <h3>Keystone Master Season 2</h3>
+                    </div>
+                    <h3>Keystone Master Season 2</h3>
 
-            <div class="" style="
+                    <div class style="
             display: flex; align-items: center;
             justify-content: space-between;
             width: 100%;">
-                <h2 class="cartexto">R$ 200 ⁰⁰</h2>
-                <a href="ksm.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
-                    target="_blank" class="card-button">Mais Detalhes</a>
-            </div>
-        </div>
+                        <h2 class="cartexto">R$ 200 ⁰⁰</h2>
+                        <a href="ksm.html"
+                            style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                            target="_blank" class="card-button">Mais Detalhes</a>
+                    </div>
+                </div>
 
+                <div class="card ">
 
-        <div class="card ">
+                    <!-- Conteúdo do cartão 3 -->
+                    <div class="image-container">
+                        <img src="img/bau.png" alt="Imagem 1"
+                            class="default-image">
 
-            <!-- Conteúdo do cartão 3 -->
-            <div class="image-container">
-                <img src="img/bau.png" alt="Imagem 1" class="default-image">
-
-            </div>
-            <h3>M+ 20</h3>
-            <div class="" style="
+                    </div>
+                    <h3>M+ 20</h3>
+                    <div class style="
             display: flex; align-items: center;
             justify-content: space-between;
             width: 100%;">
-                <h2 class="cartexto">R$ 40 ⁰⁰</h2>
-                <a href="M+20.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
-                    target="_blank" class="card-button">Mais Detalhes</a>
-            </div>
-        </div>
+                        <h2 class="cartexto">R$ 40 ⁰⁰</h2>
+                        <a href="M+20.html"
+                            style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                            target="_blank" class="card-button">Mais Detalhes</a>
+                    </div>
+                </div>
 
-        <div class="card ">
+                <div class="card ">
 
-            <!-- Conteúdo do cartão 4 -->
-            <div class="image-container">
-                <img src="img/bau.png" alt="Imagem 1" class="default-image">
+                    <!-- Conteúdo do cartão 4 -->
+                    <div class="image-container">
+                        <img src="img/bau.png" alt="Imagem 1"
+                            class="default-image">
 
-            </div>
-            <h3>M+ 17</h3>
+                    </div>
+                    <h3>M+ 17</h3>
 
-            <div class="" style="
+                    <div class style="
             display: flex; align-items: center;
             justify-content: space-between;
             width: 100%;">
-                <h2 class="cartexto">R$ 20 ⁰⁰</h2>
-                <a href="M+17.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
-                    target="_blank" class="card-button">Mais Detalhes</a>
-            </div>
-        </div>
+                        <h2 class="cartexto">R$ 20 ⁰⁰</h2>
+                        <a href="M+17.html"
+                            style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                            target="_blank" class="card-button">Mais Detalhes</a>
+                    </div>
+                </div>
 
-        <div class="card ">
+                <div class="card ">
 
-            <!-- Conteúdo do cartão 5 -->
-            <div class="image-container">
-                <img src="img/bau.png" alt="Imagem 1" class="default-image">
+                    <!-- Conteúdo do cartão 5 -->
+                    <div class="image-container">
+                        <img src="img/bau.png" alt="Imagem 1"
+                            class="default-image">
 
-            </div>
-            <h3>M+ 16</h3>
-            <div class="" style="
+                    </div>
+                    <h3>M+ 16</h3>
+                    <div class style="
             display: flex; align-items: center;
             justify-content: space-between;
             width: 100%;">
-                <h2 class="cartexto">R$ 15 ⁰⁰</h2>
-                <a href="M+16.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;"
-                    target="_blank" class="card-button">Mais Detalhes</a>
+                        <h2 class="cartexto">R$ 15 ⁰⁰</h2>
+                        <a href="M+16.html"
+                            style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                            target="_blank" class="card-button">Mais Detalhes</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- ... Código anterior ... -->
+
+        <div class="about-section" id="about">
+            <h2 class="about-text">Quem somos</h2>
+            <div class="about-content">
+                <img
+                    src="https://static.icy-veins.com/images/wow/og-images/shadowlands-mythic-season-1.jpg"
+                    alt="Sobre">
+                <p class="about-description"> Somos um grupo de jogadores
+                    veteranos de World of Warcraft que não apenas amam
+                    o jogo, mas também têm uma profunda compreensão das M+.
+                    Nossa equipe é composta por jogadores talentosos
+                    e dedicados
+                    , muitos dos quais têm anos de experiência no mais alto
+                    nível de jogabilidade.</p>
+
             </div>
         </div>
 
+        <!----Seção de Dúvidas-->
+        <div class="Duvidas" id="faq">
+            <div class="duvidas-descriçao">
+                <h2>Dúvidas Frequentes</h2>
+                <ul>
+                    <li class="faq-item" data-active>
+                        <button class="faq-button">Como funciona o site?</button>
+                        <div class="faq-answer">
+                            Atualmente, o nosso site opera mais como um catálogo
+                            que é frequentemente atualizado. Aqui, você
+                            pode se informar sobre os serviços que oferecemos.
+                            Se você estiver interessado em comprar algum
+                            serviço, basta entrar em contato via 
+                            <span style="color: blue;"><a href="link-do-Discord" target="_blank" style="text-decoration: none; color: blue;">Discord</a></span> ou
+                            <span style="color: green;"><a href="link-do-WhatsApp" target="_blank" style="text-decoration: none; color: green;">WhatsApp</a></span>. Também oferecemos alguns serviços
+                            personalizados e pacotes que variam de acordo com as
+                            semanas e as necessidades dos clientes.
+                            Entre
+                            em contato para obter mais informações.
+                        </div>
+                        
 
-    </div>
-    </div>
-    <!-- ... Código anterior ... -->
+                    </li>
+                    <li class="faq-item">
+                        <button class="faq-button">Como funciona o serviço de
+                            Boosting no WoW?</button>
+                        <div class="faq-answer">
+                            Após efetuar o pedido e o pagamento, nós o
+                            executamos conforme solicitado, seja com um jogador
+                            de
+                            nossa equipe ou você mesmo jogando. Dessa forma,
+                            você economiza tempo, permitindo que você faça
+                            as
+                            atividades que mais gosta no jogo, sem a necessidade
+                            de lidar com jogadores aleatórios ou
+                            qualquer
+                            coisa do tipo. Deixe o trabalho pesado conosco 😊.
+                        </div>
+                    </li>
 
-    <div class="about-section" id="about">
-        <h2 class="about-text">Quem somos</h2>
-        <div class="about-content">
-            <img src="https://static.icy-veins.com/images/wow/og-images/shadowlands-mythic-season-1.jpg" alt="Sobre">
-            <p class="about-description"> Somos um grupo de jogadores veteranos de World of Warcraft que não apenas amam
-                o jogo, mas também têm uma profunda compreensão das M+. Nossa equipe é composta por jogadores talentosos
-                e dedicados
-                , muitos dos quais têm anos de experiência no mais alto nível de jogabilidade.</p>
+                    <li class="faq-item">
+                        <button class="faq-button">Eu quero fazer um pedido
+                            grande para mim ou para minha guilda ou amigos,
+                            consigo algum
+                            desconto?</button>
+                        <div class="faq-answer">
+                            Claro! Você pode contar com descontos generosos
+                            sempre que escolher nossos serviços. Garantimos
+                            segurança e preços acessíveis.
+                        </div>
+                    </li>
 
+                    <li class="faq-item">
+                        <button class="faq-button">Armor Stack e Chaves
+                            Específicas:</button>
+                        <div class="faq-answer">
+                            Em todos os nossos serviços, o valor da chave junto
+                            com o Armor Stack está incluído... (não
+                            aplicável para o início da temporada).
+                            Armor Stack é simplesmente a maior quantidade de
+                            pessoas com o mesmo tipo de armadura no mesmo
+                            grupo. No caso de placas e couro, serão 5 jogadores
+                            em uma M+, enquanto tecido e malha serão
+                            apenas
+                            4, já que, até o momento, não existem tanques de
+                            tecido ou malha.
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <button class="faq-button">Quais métodos de pagamento
+                            vocês aceitam?</button>
+                        <div class="faq-answer">
+                            Trabalhamos com a plataforma do Mercado Pago,
+                            portanto, aceitamos cartões de crédito ou débito,
+                            assim como PIX.
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
+
+        <!---Seção de Coach-->
         <div class="coach" id="segu">
 
             <h2 class=textoh2 style="font-weight: 100;">End Gear Coach</h2>
 
             <div class="segurança">
                 <div class="coluna">
-                    <p><span class="icone"><i class="fas fa-shield"></i></span>PRO players no time de suporte</p>
-                    <p><span class="icone"><i class="fas fa-users"></i></span>Nosso próprio time de boost</p>
-                    <p><span class="icone"><i class="fas fa-lock"></i></span>Proteção VPN</p>
+                    <p><span class="icone"><i class="fas fa-shield"></i></span>PRO
+                        players no time de suporte</p>
+                    <p><span class="icone"><i class="fas fa-users"></i></span>Nosso
+                        próprio time de boost</p>
+                    <p><span class="icone"><i class="fas fa-lock"></i></span>Proteção
+                        VPN</p>
                 </div>
                 <div class="coluna">
-                    <p><span class="icone"><i class="fas fa-play"></i></span>Vamos começar o seu pedido assim que
+                    <p><span class="icone"><i class="fas fa-play"></i></span>Vamos
+                        começar o seu pedido assim que
                         você estiver disponível</p>
-                    <p><span class="icone"><i class="fas fa-gamepad"></i></span>Nós tryhardamos para que você
+                    <p><span class="icone"><i class="fas fa-gamepad"></i></span>Nós
+                        tryhardamos para que você
                         disfrute do jogo</p>
                 </div>
                 <div class="coluna">
                     <ul>
-                        <li><span class="check-icon">&#10004;</span> Garantida uma comunicação educada e
-                            profissional com os gerentes da plataforma e dos jogadores envolvidos</li>
-                        <li><span class="check-icon">&#10004;</span> Suporte 24 horas por dia, 7 dias por semana e
-                            resolva quaisquer problemas que possam surgir de forma rápida e profissional</li>
-                        <li><span class="check-icon">&#10004;</span> Os dados pessoais dos clientes estão protegidos
+                        <li><span class="check-icon">&#10004;</span> Garantida
+                            uma comunicação educada e
+                            profissional com os gerentes da plataforma e dos
+                            jogadores envolvidos</li>
+                        <li><span class="check-icon">&#10004;</span> Suporte 24
+                            horas por dia, 7 dias por semana e
+                            resolva quaisquer problemas que possam surgir de
+                            forma rápida e profissional</li>
+                        <li><span class="check-icon">&#10004;</span> Os dados
+                            pessoais dos clientes estão protegidos
                         </li>
-                        <li><span class="check-icon">&#10004;</span> Disfrute ao máximo, colaborando conosco!
+                        <li><span class="check-icon">&#10004;</span> Disfrute ao
+                            máximo, colaborando conosco!
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
-    </div>
+        <!---Seção de Contatos-->
+        <div class="contact-section" id="contact">
 
-    <div class="Duvidas" id="faq">
-        <div class="duvidas-descriçao">
-            <h2>Dúvidas Frequentes</h2>
-            <ul>
-                <li class="faq-item">
-                    <button class="faq-button">Como funciona o site?</button>
-                    <div class="faq-answer">
-                        Atualmente, o nosso site opera mais como um catálogo que é frequentemente atualizado. Aqui, você
-                        pode se informar sobre os serviços que oferecemos. Se você estiver interessado em comprar algum
-                        serviço, basta entrar em contato via Discord ou WhatsApp. Também oferecemos alguns serviços
-                        personalizados e pacotes que variam de acordo com as semanas e as necessidades dos clientes.
-                        Entre
-                        em contato para obter mais informações.
-                    </div>
-                </li>
-                <li class="faq-item">
-                    <button class="faq-button">Como funciona o serviço de Boosting no WoW?</button>
-                    <div class="faq-answer">
-                        Após efetuar o pedido e o pagamento, nós o executamos conforme solicitado, seja com um jogador
-                        de
-                        nossa equipe ou você mesmo jogando. Dessa forma, você economiza tempo, permitindo que você faça
-                        as
-                        atividades que mais gosta no jogo, sem a necessidade de lidar com jogadores aleatórios ou
-                        qualquer
-                        coisa do tipo. Deixe o trabalho pesado conosco 😊.
-                    </div>
-                </li>
-
-                <li class="faq-item">
-                    <button class="faq-button">Eu quero fazer um pedido grande para mim ou para minha guilda ou amigos,
-                        consigo algum
-                        desconto?</button>
-                    <div class="faq-answer">
-                        Claro! Você pode contar com descontos generosos sempre que escolher nossos serviços. Garantimos
-                        segurança e preços acessíveis.
-                    </div>
-                </li>
-
-                <li class="faq-item">
-                    <button class="faq-button">Armor Stack e Chaves Específicas:</button>
-                    <div class="faq-answer">
-                        Em todos os nossos serviços, o valor da chave junto com o Armor Stack está incluído... (não
-                        aplicável para o início da temporada).
-                        Armor Stack é simplesmente a maior quantidade de pessoas com o mesmo tipo de armadura no mesmo
-                        grupo. No caso de placas e couro, serão 5 jogadores em uma M+, enquanto tecido e malha serão
-                        apenas
-                        4, já que, até o momento, não existem tanques de tecido ou malha.
-                    </div>
-                </li>
-                <li class="faq-item">
-                    <button class="faq-button">Quais métodos de pagamento vocês aceitam?</button>
-                    <div class="faq-answer">
-                        Trabalhamos com a plataforma do Mercado Pago, portanto, aceitamos cartões de crédito ou débito,
-                        assim como PIX.
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- ... Resto do código ... -->
-
-
-    <div class="contact-section" id="contact">
-        <!-- Ícones de contato aqui -->
-        <div class="contact-icons">
-            <h2>Entre em contato conosco</h2>
-            <div> <span class="contact-text">Discord</span>
-                <a href="seu-site-aqui" target="_blank">
-                    <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-7-1.png" alt="Discord">
-                </a>
+            <!-- Ícones de contato aqui -->
+            <div class="contact-icons">
+                <h2>Entre em contato conosco</h2>
+                <div> <a href="seu-site-aqui" class="contact-text">Discord</span>
+                    <a href="seu-site-aqui" target="_blank">
+                        <img
+                            src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-7-1.png"
+                            alt="Discord">
+                    </a>
+                </div>
+                <div> <a href="https://wa.me/557799237302" class="contact-text">WhatsApp</span>
+                    <a href="https://wa.me/557799237302" target="_blank">
+                        <img
+                            src="https://imagepng.org/whatsapp-icone-icon/whatsapp-icone-2/"
+                            alt="WhatsApp">
+                    </a>
+                </div>
             </div>
-            <div> <span class="contact-text">WhatsApp</span>
-                <a href="https://wa.me/557799237302" target="_blank">
-                    <img src="https://imagepng.org/whatsapp-icone-icon/whatsapp-icone-2/" alt="WhatsApp">
-                </a>
-            </div>
+
         </div>
-    </div>
-    <div style="flex: 1;"></div>
 
+        <div style="flex: 1;"></div>
 
+        <!-- Rodapé (inicialmente oculto) -->
+        <footer id="page-footer">
+            &copy; 2023
+        </footer>
 
-    <!-- Rodapé (inicialmente oculto) -->
-    <footer id="page-footer">
-        &copy; 2023
-    </footer>
+        <button id="voltar-ao-topo"><span class="material-symbols-outlined">
+                stat_2
+            </span></button> <!-- Ícone de seta para cima -->
 
-    <button id="voltar-ao-topo"><span class="material-symbols-outlined">
-            stat_2
-        </span></button> <!-- Ícone de seta para cima -->
-
-
-    <!---Código para botão de voltar ao início-->
-    <script>
+        <!---Código para botão de voltar ao início-->
+        <script>
         const button = document.getElementById('voltar-ao-topo');
 
         window.addEventListener('scroll', () => {
@@ -1083,8 +1250,8 @@
 
     </script>
 
-    <!---Código para transição de rodapé/footer-->
-    <script>
+        <!---Código para transição de rodapé/footer-->
+        <script>
         window.addEventListener('scroll', function () {
             var scrollHeight = document.documentElement.scrollHeight;
             var scrollTop = window.scrollY;
@@ -1101,8 +1268,8 @@
         });
     </script>
 
-    <!---Código para transição dos cartões-->
-    <script>
+        <!---Código para transição dos cartões-->
+        <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cards = document.querySelectorAll(".card");
 
@@ -1114,8 +1281,7 @@
         });
     </script>
 
-
-    <script>
+        <script>
         // Animações de scroll na parte do SOBRE NÒS
         ScrollReveal().reveal('.about-text', { delay: 750 });
         ScrollReveal().reveal('.about-content', { delay: 1000 });
@@ -1131,9 +1297,8 @@
 
     </script>
 
-
-    <!---Código para animação do botao hamburguer-->
-    <script>
+        <!---Código para animação do botao hamburguer-->
+        <script>
         document.addEventListener("DOMContentLoaded", function () {
             const menuToggle = document.getElementById("menu-toggle");
             const menuContainer = document.getElementById("menu-container");
@@ -1146,8 +1311,8 @@
 
     </script>
 
-    <!---Código para transição no scroll-->
-    <script>
+        <!---Código para transição no scroll-->
+        <script>
         window.addEventListener("scroll", () => {
             const header = document.querySelector(".scroll-header");
 
@@ -1161,7 +1326,8 @@
 
     </script>
 
-    <script>
+        <!--Botao duvidas-->
+        <script>
         const faqButtons = document.querySelectorAll('.faq-button');
         faqButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -1173,8 +1339,9 @@
                 }
             });
         });
+
     </script>
 
-</body>
+    </body>
 
 </html>
