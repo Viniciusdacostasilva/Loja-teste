@@ -139,7 +139,7 @@ body {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    padding: 5px 10px;
+    padding: 12px 85px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -156,9 +156,11 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria quatro colunas iguais */
+    gap: 20px; /* Espaçamento entre os cartões */
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
+
     justify-content: center;
     margin-top: -34px;
 
@@ -177,8 +179,8 @@ body {
     overflow: hidden;
     perspective: 1000px;
     /* Define a perspectiva para criar o efeito 3D */
-    width: 350px;
-    height: 287px;
+    width: 301px;
+    height: 385px;
     perspective: 1000px;
     /* Define a perspectiva para criar o efeito 3D */
     margin-right: 10px;
@@ -211,52 +213,12 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
-}
 
-.card:hover .default-image {
-    transform: scale(1.2); /* Aumenta a escala da imagem ao passar o mouse */
-}
-
-.card:hover .default-image.zoomed-in {
-    animation: zoom-and-move 0.3s ease;
-    transform-origin: center center;
-}
-
-@keyframes zoom-and-move {
-    0% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1.5) translate(-10%, -10%);
-    }
-}
-
-.default-image,
-.hover-image {
-    width: 300px;
     /* Defina a largura desejada, como 100% para preencher a largura do contêiner */
     height: 169px;
-    /* Mantém a proporção da imagem */
-    transition: transform 1.3s;
+
 }
 
-.default-image {
-    transform: rotateY(0deg);
-    /* Rotação inicial da primeira imagem (0 graus) */
-}
-
-.hover-image {
-    transform: rotateY(180deg);
-    /* Rotação inicial da segunda imagem (180 graus) */
-    backface-visibility: hidden;
-    /* Evita que a segunda imagem seja visível antes da rotação */
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    /* Inicialmente, oculte a segunda imagem */
-}
 
 
 .card-description {
@@ -280,7 +242,6 @@ body {
 .card {
     opacity: 0;
     /* Começa com opacidade zero */
-    animation: fade-in 1s ease-in-out forwards;
     /* Animando a opacidade */
 }
 
