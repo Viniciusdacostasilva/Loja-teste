@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cartão com Borda Personalizada</title>
+  <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      
+      .dragon-border {
+        position: relative;
+        width: 340px; /* Ajuste conforme necessário */
+        height: 500px; /* Ajuste conforme necessário */
+        background: url('https://uploaddeimagens.com.br/images/004/705/336/full/image-removebg-preview.png?1704638391') center/cover no-repeat; /* Imagem de fundo para a borda */
+        margin: 20px; /* Espaçamento externo para a borda */
+      }
+      
+      .card {
+        position: relative;
+        z-index: 1; /* Coloca o conteúdo do cartão acima da imagem de fundo */
+        background-color: #fff; /* Cor de fundo do cartão */
+        padding: 20px;
+        border-radius: 10px; /* Arredondamento da borda interna */
+      }
+      
+      h2 {
+        margin-top: 0;
+        color: #2c3e50; /* Cor do texto */
+      }
+      
+      p {
+        color: #7f8c8d; /* Cor do texto */
+      }
+      
+  </style>
+</head>
+<body>
+  <div class="dragon-border">
+    <div class="card">
+      <!-- Conteúdo do cartão (texto, etc.) -->
+      <h2>Título do Cartão</h2>
+      <p>Conteúdo do cartão vai aqui...</p>
+    </div>
+  </div>
+</body>
+</html>

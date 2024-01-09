@@ -11,17 +11,57 @@
         rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045" />
+    <link rel="icon" type="image/x-icon"
+        href="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045" />
     <script type="text/javascript" src="/js/javascript.js"></script>
     <style>
         /* Telas normais */
+        /* Estilizando o botão */
+        .mercadopago-button {
+            padding: 11px 101px !important;
+            font-size: 0.875em;
+            line-height: 2.7142857142857144;
+            background: #009ee3;
+            border-radius: 0.2857142857142857em;
+            color: #fff;
+            cursor: pointer;
+            border: 0;
+            margin-top: 1rem;
+            position: absolute;
+            margin-left: -7.3rem;
+        }
+
+        .chat-button {
+            justify-content: center;
+            font-size: 14px;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            background: #131330;
+            color: #3498db;
+            border-radius: 5px;
+            position: relative;
+            display: flex;
+            width: 56.5%;
+            height: 61%;
+            margin-left: 6rem;
+            margin-top: 7.5rem;
+        }
+
+        /* Mudando a cor do botão quando hover */
+
+
+        .info {
+            margin-right: 1rem;
+        }
+
         .charutodecarne {
             justify-content: space-between;
             width: 100%;
         }
 
         b,
-        .textop,
         strong {
             font-weight: bolder;
             font-size: 30px;
@@ -96,7 +136,7 @@
         }
 
         body {
-            background-image: url('https://www.warcrafttavern.com/wp-content/uploads/2023/11/WoW-Dragonflight-Season-3-Amirdrassil-the-Dreams-Hope.jpg');
+            background-image: url('https://cdn.mos.cms.futurecdn.net/XnvF48RqPvSZsvpSpNv27a.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -241,6 +281,9 @@
         .title-container h2 {
             font-size: 24px;
             margin-bottom: 10px;
+            margin-left: -19rem;
+            position: relative;
+            right: -9rem;
             font-family: "Core Sans D 75 Black W01 Rg";
         }
 
@@ -264,8 +307,7 @@
             color: white;
             text-align: left;
             margin-top: 1rem;
-            margin-left: -39rem;
-            position: relative;
+            margin-left: 8rem;
         }
 
 
@@ -358,7 +400,7 @@
 
 
             body {
-                background-image: url('https://www.warcrafttavern.com/wp-content/uploads/2023/11/WoW-Dragonflight-Season-3-Amirdrassil-the-Dreams-Hope.jpg');
+                background-image: url('https://cdn.mos.cms.futurecdn.net/XnvF48RqPvSZsvpSpNv27a.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -523,9 +565,10 @@
                 color: white;
                 text-align: left;
                 margin-top: 1rem;
-                margin-left: -11rem;
+                margin-left: -465px;
                 height: 26rem;
             }
+
 
             .contact-section {
                 padding: 20px;
@@ -605,14 +648,36 @@
 
         /*Ajustes para MOBILE*/
         @media screen and (max-width:426px) {
+            .chat-button {
+                justify-content: center;
+                font-size: 14px;
+                align-items: center;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                background: #131330;
+                color: #3498db;
+                border-radius: 5px;
+                position: relative;
+                display: flex;
+                width: 81.5%;
+                height: 20%;
+                margin-left: -0.2rem;
+                margin-top: 3.5rem;
+            }
 
-            b,
-            .textop,
-            strong {
-                font-weight: bolder;
-                font-size: 30px;
-                color: rgb(2, 207, 2);
-                margin-left: -1rem;
+            .mercadopago-button {
+                padding: 0px 48px !important;
+                font-size: 0.875em;
+                line-height: 2.7142857142857144;
+                background: #009ee3;
+                border-radius: 0.2857142857142857em;
+                color: #fff;
+                cursor: pointer;
+                border: 0;
+                margin-top: 0rem;
+                position: absolute;
+                margin-left: -4.3rem;
             }
 
             .charutodecarne {
@@ -662,7 +727,7 @@
             }
 
             body {
-                background-image: url('https://www.warcrafttavern.com/wp-content/uploads/2023/11/WoW-Dragonflight-Season-3-Amirdrassil-the-Dreams-Hope.jpg');
+                background-image: url('https://cdn.mos.cms.futurecdn.net/XnvF48RqPvSZsvpSpNv27a.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -795,9 +860,10 @@
                 font-size: 14px;
                 margin-bottom: 10px;
                 font-family: "Core Sans D 75 Black W01 Rg";
-                margin-top: 2rem;
-                margin-right: 2rem;
-                margin-left: -1rem;
+                margin-top: 3rem;
+                margin-right: 0rem;
+                margin-left: 0;
+                left: -1rem;
             }
 
 
@@ -814,7 +880,6 @@
                 margin-top: 6px;
                 margin-right: 2rem;
                 font-size: 11px;
-                margin-left: 0rem;
             }
 
 
@@ -845,17 +910,15 @@
 
             }
 
-
             .contact-icons {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                margin-top: 0.3rem;
+                margin-top: -0.3rem;
                 color: white;
-                margin-right: 3.5rem;
+                margin-right: 4rem;
             }
-
 
 
             .contact-icons img {
@@ -929,7 +992,8 @@
     <header class="header">
         <div class="header-container">
             <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-                <img src="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045" alt="header image" class="header-image" style="margin-right: 0px;">
+                <img src="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045"
+                    alt="header image" class="header-image" style="margin-right: 0px;">
                 <h1 class="header-text">End Gear</h1>
             </a>
         </div>
@@ -938,7 +1002,6 @@
 
     <!-- Carousel de 2 imagens -->
     <div class="charutodecarne">
-
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -974,38 +1037,25 @@
         <div class="body-container">
 
         </div>
+
         <div class="body-card" style="
-        font-family: &quot;Core Sans D 75 Black W01 Rg&quot;;
-    ">
+            font-family: &quot;Core Sans D 75 Black W01 Rg&quot;;
+        ">
             <div class="title-container">
                 <h2>M+ 16 Timed</h2>
                 <p style="text-align:center ;">&gt; &gt;&gt; NO TEMPO &lt;&lt;</p>
                 <p style="text-align:center;">TODOS OS ITENS SÃO SEUS</p>
                 <p style="color: #11f011; text-align:center; font-size: 20px; margin-top: 10px;">
-                    <strong>R$20,00</strong></p>
+                    <strong>R$20,00</strong>
+                </p>
                 <div class="button-container">
                     <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
-data-preference-id="390597006-bf0b64d1-d146-4159-a89b-e106842b3caa" data-source="button">
-</script>
-                    </a>
-                </div>
-
-                <div class="contact-icons">
-                    <div>
-                        <span class="contact-text">Discord</span>
-                        <a href="seu-site-aqui" target="_blank">
-                            <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-7-1.png"
-                                alt="Discord">
-                        </a>
-                        <span class="contact-text">WhatsApp</span>
-                        <a href="https://wa.me/557799237302" target="_blank">
-                            <img src="https://imagepng.org/whatsapp-icone-icon/whatsapp-icone-2/" alt="WhatsApp">
-                        </a>
-                    </div>
+                        data-preference-id="390597006-bf0b64d1-d146-4159-a89b-e106842b3caa" data-source="button">
+                        </script>
                 </div>
 
 
-
+                <a href="https://wa.me/557799237302" class="chat-button">CHAT</a>
 
 
 
@@ -1015,11 +1065,7 @@ data-preference-id="390597006-bf0b64d1-d146-4159-a89b-e106842b3caa" data-source=
 
 
 
-
-    </div>
-
-
-    <div class="body-description" style="
+        <div class="body-description" style="
     font-family: &quot;Core Sans D 75 Black W01 Rg&quot;;">
         <h2>Descrição</h2>
         <p>Chave 16+ / Season 3 Wow Dragonflight - Blizzard</p>
@@ -1042,132 +1088,132 @@ data-preference-id="390597006-bf0b64d1-d146-4159-a89b-e106842b3caa" data-source=
         </ul>
     </div>
 
-    <div class="contact-section" id="contact">
-        <!-- Ícones de contato aqui -->
+        <div class="contact-section" id="contact">
+            <!-- Ícones de contato aqui -->
 
-    </div>
-    <!-- Mini janela de zoom -->
+        </div>
+        <!-- Mini janela de zoom -->
 
-    <script>
-        function showZoom() {
-            var zoomCard = document.querySelector('.zoom-card');
-            var zoomImage = document.querySelector('#zoom-image');
-            var bodyImage = document.querySelector('.body-image');
+        <script>
+            function showZoom() {
+                var zoomCard = document.querySelector('.zoom-card');
+                var zoomImage = document.querySelector('#zoom-image');
+                var bodyImage = document.querySelector('.body-image');
 
-            zoomImage.src = bodyImage.src;
-            zoomCard.style.opacity = '1';
-            zoomCard.style.pointerEvents = 'auto';
+                zoomImage.src = bodyImage.src;
+                zoomCard.style.opacity = '1';
+                zoomCard.style.pointerEvents = 'auto';
 
-            document.addEventListener('keydown', function (event) {
-                if (event.key === 'Escape') {
-                    hideZoom();
-                }
-            });
-        }
-
-        function hideZoom() {
-            var zoomCard = document.querySelector('.zoom-card');
-            zoomCard.style.opacity = '0';
-            zoomCard.style.pointerEvents = 'none';
-        }
-    </script>
-    <footer id="page-footer" style="bottom: -40px;">
-        © 2023
-    </footer>
-
-    <script>
-        window.addEventListener('scroll', function () {
-            var scrollHeight = document.documentElement.scrollHeight;
-            var scrollTop = window.scrollY;
-            var clientHeight = window.innerHeight;
-
-            // Verifica se o usuário está perto do final da página
-            if (scrollHeight - scrollTop <= clientHeight + 40) {
-                // Mostra o rodapé suavemente
-                document.getElementById('page-footer').style.bottom = '0';
-            } else {
-                // Oculta o rodapé suavemente
-                document.getElementById('page-footer').style.bottom = '-40px';
-            }
-        });
-    </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-image');
-
-        function changeSlide(step) {
-            currentSlide += step;
-            if (currentSlide < 0) {
-                currentSlide = slides.length - 1;
-            } else if (currentSlide >= slides.length) {
-                currentSlide = 0;
-            }
-            showSlide();
-        }
-
-        function showSlide() {
-            slides.forEach((slide, index) => {
-                if (index === currentSlide) {
-                    slide.style.display = 'block';
-                } else {
-                    slide.style.display = 'none';
-                }
-            });
-
-            // Adicione a classe 'hidden' a todas as imagens
-            slides.forEach(slide => {
-                slide.classList.add('hidden');
-            });
-
-            // Remova a classe 'hidden' da imagem atual
-            slides[currentSlide].classList.remove('hidden');
-        }
-
-        showSlide(); // Mostrar a primeira imagem inicialmente
-
-    </script>
-
-    <!-- Code injected by live-server -->
-    <script>
-        // <![CDATA[  <-- For SVG support
-        if ('WebSocket' in window) {
-            (function () {
-                function refreshCSS() {
-                    var sheets = [].slice.call(document.getElementsByTagName("link"));
-                    var head = document.getElementsByTagName("head")[0];
-                    for (var i = 0; i < sheets.length; ++i) {
-                        var elem = sheets[i];
-                        var parent = elem.parentElement || head;
-                        parent.removeChild(elem);
-                        var rel = elem.rel;
-                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                        }
-                        parent.appendChild(elem);
+                document.addEventListener('keydown', function (event) {
+                    if (event.key === 'Escape') {
+                        hideZoom();
                     }
+                });
+            }
+
+            function hideZoom() {
+                var zoomCard = document.querySelector('.zoom-card');
+                zoomCard.style.opacity = '0';
+                zoomCard.style.pointerEvents = 'none';
+            }
+        </script>
+        <footer id="page-footer" style="bottom: -40px;">
+            © 2023
+        </footer>
+
+        <script>
+            window.addEventListener('scroll', function () {
+                var scrollHeight = document.documentElement.scrollHeight;
+                var scrollTop = window.scrollY;
+                var clientHeight = window.innerHeight;
+
+                // Verifica se o usuário está perto do final da página
+                if (scrollHeight - scrollTop <= clientHeight + 40) {
+                    // Mostra o rodapé suavemente
+                    document.getElementById('page-footer').style.bottom = '0';
+                } else {
+                    // Oculta o rodapé suavemente
+                    document.getElementById('page-footer').style.bottom = '-40px';
                 }
-                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                var address = protocol + window.location.host + window.location.pathname + '/ws';
-                var socket = new WebSocket(address);
-                socket.onmessage = function (msg) {
-                    if (msg.data == 'reload') window.location.reload();
-                    else if (msg.data == 'refreshcss') refreshCSS();
-                };
-                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                    console.log('Live reload enabled.');
-                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.carousel-image');
+
+            function changeSlide(step) {
+                currentSlide += step;
+                if (currentSlide < 0) {
+                    currentSlide = slides.length - 1;
+                } else if (currentSlide >= slides.length) {
+                    currentSlide = 0;
                 }
-            })();
-        }
-        else {
-            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-        }
-        // ]]>
-    </script>
+                showSlide();
+            }
+
+            function showSlide() {
+                slides.forEach((slide, index) => {
+                    if (index === currentSlide) {
+                        slide.style.display = 'block';
+                    } else {
+                        slide.style.display = 'none';
+                    }
+                });
+
+                // Adicione a classe 'hidden' a todas as imagens
+                slides.forEach(slide => {
+                    slide.classList.add('hidden');
+                });
+
+                // Remova a classe 'hidden' da imagem atual
+                slides[currentSlide].classList.remove('hidden');
+            }
+
+            showSlide(); // Mostrar a primeira imagem inicialmente
+
+        </script>
+
+        <!-- Code injected by live-server -->
+        <script>
+            // <![CDATA[  <-- For SVG support
+            if ('WebSocket' in window) {
+                (function () {
+                    function refreshCSS() {
+                        var sheets = [].slice.call(document.getElementsByTagName("link"));
+                        var head = document.getElementsByTagName("head")[0];
+                        for (var i = 0; i < sheets.length; ++i) {
+                            var elem = sheets[i];
+                            var parent = elem.parentElement || head;
+                            parent.removeChild(elem);
+                            var rel = elem.rel;
+                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                            }
+                            parent.appendChild(elem);
+                        }
+                    }
+                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                    var address = protocol + window.location.host + window.location.pathname + '/ws';
+                    var socket = new WebSocket(address);
+                    socket.onmessage = function (msg) {
+                        if (msg.data == 'reload') window.location.reload();
+                        else if (msg.data == 'refreshcss') refreshCSS();
+                    };
+                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                        console.log('Live reload enabled.');
+                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                    }
+                })();
+            }
+            else {
+                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+            }
+            // ]]>
+        </script>
 
 </body>
 

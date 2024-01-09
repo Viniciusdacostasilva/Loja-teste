@@ -11,17 +11,56 @@
         rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045" />
+    <link rel="icon" type="image/x-icon"
+        href="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045" />
     <script type="text/javascript" src="/js/javascript.js"></script>
     <style>
         /* Telas normais */
+        /* Estilizando o botão */
+        .mercadopago-button {
+            padding: 11px 101px !important;
+            font-size: 0.875em;
+            line-height: 2.7142857142857144;
+            background: #009ee3;
+            border-radius: 0.2857142857142857em;
+            color: #fff;
+            cursor: pointer;
+            border: 0;
+            margin-top: 1rem;
+            position: absolute;
+            margin-left: -7.3rem;
+        }
+        .chat-button {
+            justify-content: center;
+            font-size: 14px;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            background: #131330;
+            color: #3498db;
+            border-radius: 5px;
+            position: relative;
+            display: flex;
+            width: 56.5%;
+            height: 61%;
+            margin-left: 6rem;
+            margin-top: 7.5rem;
+        }
+
+        /* Mudando a cor do botão quando hover */
+        
+
+        .info {
+            margin-right: 1rem;
+        }
+
         .charutodecarne {
             justify-content: space-between;
             width: 100%;
         }
 
         b,
-        .textop,
         strong {
             font-weight: bolder;
             font-size: 30px;
@@ -96,7 +135,7 @@
         }
 
         body {
-            background-image: url('https://www.warcrafttavern.com/wp-content/uploads/2023/11/WoW-Dragonflight-Season-3-Amirdrassil-the-Dreams-Hope.jpg');
+            background-image: url('https://cdn.mos.cms.futurecdn.net/XnvF48RqPvSZsvpSpNv27a.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -241,6 +280,9 @@
         .title-container h2 {
             font-size: 24px;
             margin-bottom: 10px;
+            margin-left: -19rem;
+            position: relative;
+            right: -9rem;
             font-family: "Core Sans D 75 Black W01 Rg";
         }
 
@@ -264,8 +306,7 @@
             color: white;
             text-align: left;
             margin-top: 1rem;
-            margin-left: -51rem;
-            position: relative;
+            margin-left:-51rem;
         }
 
 
@@ -358,7 +399,7 @@
 
 
             body {
-                background-image: url('https://www.warcrafttavern.com/wp-content/uploads/2023/11/WoW-Dragonflight-Season-3-Amirdrassil-the-Dreams-Hope.jpg');
+                background-image: url('https://cdn.mos.cms.futurecdn.net/XnvF48RqPvSZsvpSpNv27a.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -523,9 +564,10 @@
                 color: white;
                 text-align: left;
                 margin-top: 1rem;
-                margin-left: -11rem;
+                margin-left: -465px;
                 height: 26rem;
             }
+
 
             .contact-section {
                 padding: 20px;
@@ -605,16 +647,36 @@
 
         /*Ajustes para MOBILE*/
         @media screen and (max-width:426px) {
-
-            b,
-            .textop,
-            strong {
-                font-weight: bolder;
-                font-size: 30px;
-                color: rgb(2, 207, 2);
-                margin-left: -1rem;
+            .chat-button {
+                justify-content: center;
+                font-size: 14px;
+                align-items: center;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                background: #131330;
+                color: #3498db;
+                border-radius: 5px;
+                position: relative;
+                display: flex;
+                width: 81.5%;
+                height: 20%;
+                margin-left: -0.2rem;
+                margin-top: 3.5rem;
             }
-
+            .mercadopago-button {
+                padding: 0px 48px !important;
+                font-size: 0.875em;
+                line-height: 2.7142857142857144;
+                background: #009ee3;
+                border-radius: 0.2857142857142857em;
+                color: #fff;
+                cursor: pointer;
+                border: 0;
+                margin-top: 0rem;
+                position: absolute;
+                margin-left: -4.3rem;
+            }
             .charutodecarne {
                 justify-content: space-between;
                 width: 100%;
@@ -662,7 +724,7 @@
             }
 
             body {
-                background-image: url('https://www.warcrafttavern.com/wp-content/uploads/2023/11/WoW-Dragonflight-Season-3-Amirdrassil-the-Dreams-Hope.jpg');
+                background-image: url('https://cdn.mos.cms.futurecdn.net/XnvF48RqPvSZsvpSpNv27a.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -795,9 +857,10 @@
                 font-size: 14px;
                 margin-bottom: 10px;
                 font-family: "Core Sans D 75 Black W01 Rg";
-                margin-top: 2rem;
-                margin-right: 2rem;
-                margin-left: -1rem;
+                margin-top: 3rem;
+                margin-right: 0rem;
+                margin-left: 0;
+                left: -1rem;
             }
 
 
@@ -814,7 +877,6 @@
                 margin-top: 6px;
                 margin-right: 2rem;
                 font-size: 11px;
-                margin-left: 0rem;
             }
 
 
@@ -845,17 +907,15 @@
 
             }
 
-
             .contact-icons {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                margin-top: 0.3rem;
+                margin-top: -0.3rem;
                 color: white;
-                margin-right: 3.5rem;
+                margin-right: 4rem;
             }
-
 
 
             .contact-icons img {
@@ -929,7 +989,8 @@
     <header class="header">
         <div class="header-container">
             <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-                <img src="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045" alt="header image" class="header-image" style="margin-right: 0px;">
+                <img src="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045"
+                    alt="header image" class="header-image" style="margin-right: 0px;">
                 <h1 class="header-text">End Gear</h1>
             </a>
         </div>
@@ -938,7 +999,6 @@
 
     <!-- Carousel de 2 imagens -->
     <div class="charutodecarne">
-
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -974,51 +1034,34 @@
         <div class="body-container">
 
         </div>
+
         <div class="body-card" style="
-        font-family: &quot;Core Sans D 75 Black W01 Rg&quot;;
-    ">
-            <div class="title-container">
-                <h2>M+ 18 Timed</h2>
-                <p style="text-align:center ;">&gt; &gt;&gt; NO
-                    TEMPO &lt;&lt;</p>
-                <p style="text-align:center;">TODOS OS ITENS
-                    SÃO SEUS</p>
-                <p style="color: #11f011; text-align:center; font-size: 20px; margin-top: 10px;">
-                    <strong>R$25,00</strong></p>
+            font-family: &quot;Core Sans D 75 Black W01 Rg&quot;;
+        ">
+        <div class="title-container">
+            <h2>M+ 18 Timed</h2>
+            <p style="text-align:center ;">&gt; &gt;&gt; NO
+                TEMPO &lt;&lt;</p>
+            <p style="text-align:center;">TODOS OS ITENS
+                SÃO SEUS</p>
+            <p style="color: #11f011; text-align:center; font-size: 20px; margin-top: 10px;">
+                <strong>R$25,00</strong></p>
                 <div class="button-container">
                     <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
                     data-preference-id="390597006-5e1baf29-6261-47a1-990c-749bb0637689" data-source="button">
                     </script>
                 </div>
 
-                <div class="contact-icons">
-                    <div>
-                        <span class="contact-text">Discord</span>
-                        <a href="seu-site-aqui" target="_blank">
-                            <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-7-1.png"
-                                alt="Discord">
-                        </a>
-                        <span class="contact-text">WhatsApp</span>
-                        <a href="https://wa.me/557799237302" target="_blank">
-                            <img src="https://imagepng.org/whatsapp-icone-icon/whatsapp-icone-2/" alt="WhatsApp">
-                        </a>
-                    </div>
-                </div>
-
-
-
-
+    
+                    <a href="https://wa.me/557799237302" class="chat-button">CHAT</a>
+                
 
 
             </div>
 
         </div>
 
-
-
-
     </div>
-
 
     <div class="body-description" style="
         font-family: &quot;Core Sans D 75 Black W01 Rg&quot;;">
