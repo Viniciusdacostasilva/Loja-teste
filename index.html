@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End Gear M+ Services</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <script type="text/javascript" src="/js/javascript.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal">
+
+        ScrollReveal({ reset: true });
+
+    </script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" type="image/x-icon"
+        href="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045" />
+</head>
+<style>
+    .coach {
+        width: 97%;
+        padding: 20px;
+        margin-top: 20rem;
+        text-align: center;
+        justify-content: center;
+        margin-left: 0;
+        background: #3339;
+        color: white;
+    }
+
+    .faq-item {
+        margin-bottom: 0px;
+    }
+
+    .faq-button {
+        cursor: pointer;
+        background-color: grey;
+        border: none;
+        padding: 10px;
+        color: white;
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+        font-family: 'Core Sans D 75 Black';
+        transition: all 0.35s ease-in-out;
+
+    }
+
+    .faq-item:first-child .faq-answer {
+        display: block;
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 10px;
+        background-color: #000000c9;
+       
+        transition: all 0.35s ease-in-out;
+
+    }
+
+    /* Estilo CSS para quando o botão está ativo */
+    .faq-item[data-active] .faq-button {
+        background-color: grey;
+    }
+
+    .cartexto {
+        margin: 0;
+        margin-left: 1rem;
+        color: white;
+        font-family: 'Core Sans D 75 Black';
+    }
+
+    .textoh2,
+    .segurança,
+    .about-text,
+    .about-content,
+    .duvidas-descriçao h2,
+    .duvidas-descriçao li {
+        visibility: hidden;
+        font-family: 'Core Sans D 75 Black';
+    }
+
+    .duvidas-descriçao {
+        font-family: 'Core Sans D 75 Black';
+        color: white;
+        margin-top: 5rem;
+    }
+
+    .duvidas-descriçao h2 {
+        margin-left: 2rem;
+        color: #ffc300;
+    }
+
+    .duvidas-descriçao ul {
+        margin-top: 10px;
+        margin-right: 17px;
+
+    }
+
+    .duvidas-descriçao h2,
+    .duvidas-descriçao li {
+        font-weight: 100;
+        padding: 10px 0;
+        list-style: none;
+    }
+
+    .menu-container {
+        display: flex;
+        position: absolute;
+        margin-left: -26rem;
+        transition: transform 1.3s ease-in-out;
+    }
+
+    #menu-toggle.active+.menu-container {
+        top: 127%;
+        /* Mostra o menu container quando o botão é clicado */
+    }
+
+    .menu-toggle-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+        transition: transform 0.3s;
+        position: relative;
+        z-index: 2;
+    }
+
+    .menu-toggle {
+        right: 0;
+
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s;
+        top: -5rem;
+    }
+
+    #menu-toggle-container {
+        display: flex;
+        align-items: center;
+        /* Centraliza verticalmente */
+    }
+
+
+
+    #menu-container.active {
+        display: block;
+        transform: scaleY(1);
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Core Sans D 75 Black';
+        background-color: #f0f0f0;
+    }
+
+    header {
+
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+
+
+    .bar {
+        display: none;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+
+    .menu-items {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex
+    }
+
+    .menu-items li {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .menu-items a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        font-size: 18px;
+        margin-right: 0rem;
+        margin-left: -2rem;
+        padding: 7px;
+    }
+
+
+    #voltar-ao-topo {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(176, 204, 235, 0.5);
+        /* Cor de fundo com transparência */
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 13px;
+    }
+
+
+    /* Estilos para resoluções maiores (com sublinhado e animação) */
+    @media (min-width: 768px) {
+        .vem {
+            top: -0.5rem;
+            position: relative;
+            display: none;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            /* Ajuste conforme necessário */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .default-image {
+            width: 100%;
+            height: auto;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .text-container {
+            bottom: 0.5rem;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            box-sizing: border-box;
+            font-family: 'Core Sans D 75 Black';
+        }
+
+        .text-container a {
+            bottom: 0.05rem;
+            position: relative;
+            text-align: left;
+            display: none;
+
+        }
+
+        .card:hover .default-image {
+            opacity: 0;
+        }
+
+        .card:hover .text-container {
+            transform: translateY(-75%);
+        }
+
+        .cartexto {
+            margin: 0;
+            font-family: 'Core Sans D 75 Black';
+        }
+
+        .card:hover .text-container a {
+            display: block;
+        }
+
+        .card:hover .vem {
+            display: block;
+        }
+
+        .card:hover .cartexto {
+            transform: translateY(-100%);
+            display: block;
+        }
+
+        .text-container ul {
+
+            margin-bottom: 19px;
+            padding: 15px 20px;
+            bottom: 0.5rem;
+            position: relative;
+        }
+
+        .text-container li {
+            left: 0px;
+            text-align: left;
+            position: relative;
+        }
+
+        .card-button a {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .botao2 {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            width: 18rem;
+            top: 19rem;
+            position: absolute;
+        }
+
+        /* Estilize os links dentro da lista */
+        .menu-items li a {
+            text-decoration: none;
+            /* Remova o sublinhado padrão dos links */
+            position: relative;
+            /* Para criar espaço para o sublinhado */
+            transition: all 1.3s ease;
+            /* Adicione uma transição suave de 0.3 segundos */
+        }
+
+        /* Estilize o sublinhado quando o mouse passar sobre o link */
+        .menu-items li a:hover::after {
+            content: "";
+            /* Adicione um pseudo-elemento para criar o sublinhado */
+            position: absolute;
+            /* Posicione o sublinhado de forma absoluta */
+            width: 100%;
+            /* Defina a largura do sublinhado como 100% do link */
+            height: 2px;
+            /* Defina a altura do sublinhado */
+            background-color: white;
+            /* Cor do sublinhado (pode ser personalizada) */
+            bottom: -5px;
+            /* Posicione o sublinhado abaixo do texto */
+            left: 0;
+            /* Alinhe o sublinhado com o texto */
+        }
+
+        /* Estilize o sublinhado quando o mouse passar sobre o link */
+
+    }
+
+
+    /* Estilos para o botão hamburguer em telas menores */
+    @media (max-width: 768px) {
+        #menu-toggle-container {
+            flex-direction: column;
+            /* Empilha o botão em cima do menu */
+            align-items: flex-start;
+            /* Alinha à esquerda */
+        }
+
+        .menu-toggle.active {
+            transform: rotate(90deg);
+            /* Adicionar rotação ao botão */
+        }
+
+        .menu-container.active {
+            display: block;
+            /* Mostrar o container do menu ao clicar no botão */
+            transform: scaleY(1);
+        }
+
+        .menu-toggle-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            transition: transform 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-toggle {
+            right: 74px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            top: -9px;
+        }
+    }
+
+
+    /* CONFIG PARA 1366*/
+    @media screen and (max-width: 1366px) {
+        .coach {
+            width: 97%;
+            padding: 20px;
+            margin-top: 140px;
+         
+            text-align: center;
+            color: white;
+            justify-content: center;
+            margin-left: 0;
+            background: #3339;
+        }
+
+        .titulo {
+            display: flex;
+            text-align: center;
+            color: #fff;
+            margin-top: 111px;
+          
+            justify-content: center;
+        }
+
+        .menu-toggle-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            transition: transform 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-toggle {
+            right: 74px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            top: -9px;
+        }
+    }
+
+    /*CONFIG PARA MOBILE*/
+    @media screen and (max-width: 768px) {
+        .text-container {
+            bottom: -7.4rem;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            transition: none;
+            transform: none;
+            position: relative;
+            box-sizing: border-box;
+            font-family: 'Core Sans D 75 Black';
+        }
+
+        .textoa {
+            visibility: hidden;
+            font-family: 'Core Sans D 75 Black';
+        }
+
+        .botao2 {
+            text-decoration: none;
+            color: inherit;
+            height: 30px;
+            width: 6rem;
+            right: 0rem;
+            top: 3.45rem;
+            display: flex;
+            position: absolute;
+        }
+
+        /* Estilize os links dentro da lista */
+        .menu-toggle-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            transition: transform 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-toggle {
+            right: 74px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            top: -9px;
+        }
+
+        .menu-items a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            margin-right: -2rem;
+
+        }
+
+        .menu-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: block;
+            height: 18.6rem;
+        }
+
+        .menu-container {
+            display: none;
+            position: absolute;
+            top: -100%;
+            margin-top: -2px;
+            right: 31px;
+            width: 9rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: transform 1.3s ease-in-out;
+        }
+
+        .bar {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        .image-container {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .default-image {
+            width: 100%;
+            height: auto;
+            display: block;
+
+        }
+
+
+        .cartexto {
+            margin: 2px;
+            margin-left: 1rem;
+            color: white;
+            font-size: 20px;
+        }
+
+        .duvidas-descriçao {
+            
+            color: white;
+            margin-top: -11rem;
+        }
+
+        .duvidas-descriçao h2 {
+            margin-left: 2rem;
+            color: yellow;
+        }
+
+        .duvidas-descriçao ul {
+            margin-top: 10px;
+            margin-right: 17px;
+        }
+
+        .duvidas-descriçao h2,
+        .duvidas-descriçao li {
+            font-weight: 100;
+
+            padding: 10px 0;
+        }
+
+        .duvidas-descriçao li {
+            font-size: 12px
+        }
+
+        /*Botão para voltar pro topo*/
+        #voltar-ao-topo {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 50px;
+            background-color: rgba(176, 204, 235, 0.5);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 10px;
+
+        }
+
+        /* Estilos para o cabeçalho no canto superior direito */
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+            width: 105%;
+        }
+
+        /* Estilos para o texto no cabeçalho */
+        .header-text {
+            margin-left: 21px;
+            display: flex;
+            font-size: 21px;
+        }
+
+        /* Estilos para a imagem no cabeçalho */
+        .header-image {
+            width: 30px;
+            height: 30px;
+            margin-left: 41px;
+        }
+
+        /* Estilos para os links de navegação no cabeçalho */
+        .header-links {
+            display: flex;
+            align-items: right;
+            margin-right: 45px;
+        }
+
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 24px;
+            font-size: 14px;
+        }
+
+
+        /* Alinhe o cabeçalho com o primeiro cartão */
+        .header-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://motionbgs.com/media/528/dragonflight-city-valdrakken-wow.jpg');
+            /* Substitua a URL da sua imagem de fundo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Core Sans D 75 Black';
+        }
+
+        .body-image {
+            width: 750px;
+            /* Ajuste o tamanho conforme necessário */
+            position: absolute;
+            left: 30px;
+            /* Distância da borda esquerda */
+            top: 30px;
+            /* Distância da borda superior */
+            margin-top: 80px;
+        }
+
+        /* Estilo para o container de cartões */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        /* Estilo para os cartões */
+        .card {
+            margin: 20px;
+            background-color: rgba(32, 6, 6, 0.8);
+            /* Fundo transparente */
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            /* Sombra suave */
+            text-align: center;
+            /* Centraliza o texto horizontalmente */
+        }
+
+
+
+        /* Outros estilos para título, descrição e botão */
+        .card h3,
+        .card p,
+        .card-button {
+
+            padding: 13px;
+            margin: -11px;
+            margin-left: -4px;
+            text-align: center;
+            font-size: 15px;
+            font-family: 'Core Sans D 75 Black';
+
+        }
+
+        /* Estilo para as imagens que você deseja girar */
+        .card-image {
+            transform-origin: center;
+            /* Define o ponto de origem da rotação no centro da imagem */
+
+        }
+
+
+        .card-button {
+            background-color: #0999ff;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+            /* Espaço acima do botão */
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .card {
+            color: #fff;
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 2.0s;
+            perspective: 1000px;
+            width: 313px;
+            height: 201px;
+            perspective: 1000px;
+            margin-right: 10px;
+        }
+
+
+        /* Último cartão não deve ter margem direita */
+        .card:last-child {
+            margin-right: 0;
+        }
+
+
+
+        .default-image {
+            width: 300px;
+            /* Defina a largura desejada, como 100% para preencher a largura do contêiner */
+            height: 169px;
+            /* Mantém a proporção da imagem */
+            transition: none;
+            /* Isso remove a transição de opacidade */
+        }
+
+        .card:hover .default-image {
+            opacity: 1 !important;
+            /* Defina a opacidade como 1 para evitar o fade-out */
+        }
+
+        .card:hover .text-container {
+            transform: none !important;
+            /* Mantenha o texto na posição original, sem subir */
+        }
+
+
+        .card-description {
+            text-align: left;
+            /* Alinhe o texto à esquerda */
+            margin-left: 40px;
+            /* Adicione uma margem à esquerda para afastá-lo da borda */
+            margin-left: 40px;
+            font-size: 15px;
+
+        }
+
+        .card img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+
+        /* Adicione espaço vazio para a seção "Sobre" */
+        .about-section {
+            color: #fff;
+            height: 600px;
+            margin-top: 100px;
+            /* Adiciona uma margem superior de 10px */
+            /* Ajuste a altura conforme necessário */
+        }
+
+        /* Estilos para o texto "Sobre nós" */
+        .about-text {
+            text-align: center;
+            /* Alinhando texto no centro */
+            margin-bottom: 30px;
+            /* Adiciona margem inferior de 10px */
+            margin-top: 0px;
+        }
+
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .about-content img {
+            flex: 1;
+            max-width: 59%;
+
+            margin-top: 7px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .about-description {
+            flex: 1;
+            font-family: 'Core Sans D 75 Black';
+            margin-right: 10px;
+            max-width: 65rem;
+            font-size: 13px;
+        }
+
+
+        .segurança {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 39px;
+           
+            font-size: 11px;
+            margin-left: -1rem;
+        }
+
+        .coach {
+            width: 100%;
+            margin-top: 140px;
+            color: white;
+
+           
+            background: #3339;
+
+        }
+
+        .coluna {
+            flex: 1;
+            padding: 0px 16px;
+        }
+
+        .segurança ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 11px;
+            margin-right: -6em;
+            margin-left: -4rem;
+
+        }
+
+        .coach h2 {
+
+            justify-content: center;
+            text-align: center;
+            margin-left: -30px;
+
+        }
+
+        .segurança ul {
+            list-style-type: none;
+            padding: 0;
+            margin-right: -5em;
+        }
+
+        .segurança li {
+            margin: 10px 0;
+            margin-left: 31px;
+            margin-top: -22px;
+            margin-bottom: 24px;
+
+        }
+
+        /* Resto dos estilos do cartão permanece o mesmo */
+
+        /* Estilos CSS existentes aqui */
+        /* Estilos para os ícones de contato */
+        .contact-icons img {
+            margin-top: 10px;
+            width: 30px;
+            height: 30px;
+            margin-bottom: 10px;
+            /* Espaço entre os ícones */
+        }
+
+        .contact-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -131px;
+            font-family: 'Core Sans D 75 Black';
+        }
+
+        .contact-icons div {
+            display: flex;
+            /* Alinhe ícones e texto horizontalmente */
+            align-items: center;
+            /* Centralize verticalmente */
+            margin-bottom: 10px;
+            /* Espaço entre os ícones */
+        }
+
+
+        /* Estilos para a seção de contato no meio da tela */
+        .contact-section {
+            height: calc(100vh - 60px);
+            /* 60px é a altura do cabeçalho */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: #f5f5f500;
+            /* Cor de fundo de exemplo */
+            flex-direction: column;
+            /* Alinhe os itens verticalmente */
+            margin-top: 4rem;
+        }
+
+        /* Estilos para os textos ao lado dos ícones */
+        .contact-text {
+            margin-right: 10px;
+        }
+
+        /* Resto dos estilos do cartão permanece o mesmo */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(0 0 0 / 52%);
+            color: #fff;
+            position: fixed;
+            bottom: -40px;
+            /* Inicialmente fora da tela */
+            width: 100%;
+            transition: bottom 0.3s;
+            /* Adiciona uma transição suave */
+        }
+    }
+</style>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="https://uploaddeimagens.com.br/images/004/620/761/original/1_preview_rev_1.png?1695857045"
+                alt="header image" class="header-image">
+            <h1 class="header-text">End Gear</h1>
+        </div>
+
+        <div class="navbar">
+            <div id="menu-toggle-container">
+                <button id="menu-toggle" class="menu-toggle menu-toggle-button">>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+                <div id="menu-container" class="menu-container">
+                    <ul class="menu-items">
+                        <li><a href="#about">Sobre nós</a>
+                        <li><a href="#faq">Dúvidas Frequentes</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Resto do seu conteúdo -->
+
+    <div class="titulo">
+        <h2>Serviços</h2>
+    </div>
+
+    <div class="container">
+        <!-- Container para os cartões -->
+
+        <div class="card">
+            <!-- Conteúdo do cartão 1 KSM -->
+            <div class="image-container">
+                <img src="https://uploaddeimagens.com.br/images/004/707/645/full/dinossauro.png?1704838228"
+                    alt="Imagem 1" class="default-image">
+                <div class="text-container">
+                    <h3 class="cartexto">Keystone Master Season 3</h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                        <h2 class="cartexto">R$ 260 ⁰⁰</h2>
+                    </div>
+                    <a class="textoa">Compre o Dragonflight Keystone Master: Season Three Achievement - agora com
+                        recompensas ainda
+                        maiores e...</a>
+
+                    <ul>
+                        <div class="vem">O que vem neste serviço:</div>
+                        <li>
+                            Total de 12 pedras M+16
+                        </li>
+                        <li>
+                            Gear 463 no fim da dungeon
+                        </li>
+                        <li>
+                            Gear 476 no bau semanal
+                        </li>
+                        <li>
+                            Montaria da Season
+                        </li>
+
+                    </ul>
+                    <div class="botao2">
+                        <a href="#contact"
+                            style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                             class="card-button">Mais Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Outros cartões aqui -->
+
+        <div class="card">
+            <!-- Conteúdo do cartão 2 M+20 -->
+            <div class="image-container">
+                <img src="https://uploaddeimagens.com.br/images/004/707/644/full/20.png?1704838208"
+                    alt="Imagem 1" class="default-image">
+                <div class="text-container">
+                    <h3 class="cartexto">M+ 20</h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                        <h2 class="cartexto">R$ 36 ⁰⁰</h2>
+
+                    </div>
+                    <a class="textoa">Uma experiencia única com um valor imbatível conosco, no precinho entre outros
+                        beneficios
+                        disponivéis à você, veja mais...</a>
+
+                    <ul>
+                        <div class="vem">O que vem neste serviço:</div>
+                        <li>
+                            1 DG M+20
+                        </li>
+                        <li>
+                            Gear 470 no fim da dungeon
+                        </li>
+                        <li>
+                            Gear 483 no bau semanal
+                        </li>
+                        <li>
+                            Brasão Onírico do Aspecto
+                        </li>
+
+                    </ul>
+                    <div class="botao2">
+                        <a href="#contact"
+                            style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                            class="card-button">Mais Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- Conteúdo do cartão 3 M+18 -->
+            <div class="image-container">
+                <img src="https://uploaddeimagens.com.br/images/004/707/643/full/18.png?1704838183"
+                    alt="Imagem 1" class="default-image">
+                <div class="text-container">
+                    <h3 class="cartexto">M+ 18</h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                        <h2 class="cartexto">R$ 25 ⁰⁰</h2>
+
+                    </div>
+                    <a class="textoa">Uma experiencia única com um valor imbatível conosco, no precinho entre outros
+                        beneficios
+                        disponivéis à você, veja mais...</a>
+
+                    <ul>
+                        <div class="vem">O que vem neste serviço:</div>
+                        <li>
+                            1 DG M+18
+                        </li>
+                        <li>
+                            Gear 467 no fim da dungeon
+                        </li>
+                        <li>
+                            Gear 480 no bau semanal
+                        </li>
+                        <li>
+                            Brasão Onírico do Aspecto
+                        </li>
+
+                    </ul>
+                    <div class="botao2">
+                        <a href="#contact"
+                            style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                            class="card-button">Mais Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- Conteúdo do cartão 4 M+17  -->
+            <div class="image-container">
+                <img src="https://uploaddeimagens.com.br/images/004/707/642/full/17.png?1704838159"
+                    alt="Imagem 1" class="default-image">
+                <div class="text-container">
+                    <h3 class="cartexto">M+ 17</h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                        <h2 class="cartexto">R$ 22 ⁰⁰</h2>
+
+                    </div>
+                    <a class="textoa">Uma experiencia única com um valor imbatível conosco, no precinho entre outros
+                        beneficios
+                        disponivéis à você, veja mais...</a>
+
+                    <ul>
+                        <div class="vem">O que vem neste serviço:</div>
+                        <li>
+                            1 DG M+17
+                        </li>
+                        <li>
+                            Gear 467 no fim da dungeon
+                        </li>
+                        <li>
+                            Gear 476 no bau semanal
+                        </li>
+                        <li>
+                            Brasão Onírico do Aspecto
+                        </li>
+
+                    </ul>
+                    <div class="botao2">
+                        <a href="#contact"
+                            style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                            class="card-button">Mais Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- Conteúdo do cartão 5 M+16-->
+            <div class="image-container">
+                <img src="https://uploaddeimagens.com.br/images/004/707/641/full/16.png?1704838116"
+                    alt="Imagem 1" class="default-image">
+                <div class="text-container">
+                    <h3 class="cartexto">M+ 16</h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                        <h2 class="cartexto">R$ 20 ⁰⁰</h2>
+
+                    </div>
+                    <a class="textoa">Uma experiencia única com um valor imbatível conosco, no precinho entre outros
+                        beneficios
+                        disponivéis à você, veja mais...</a>
+
+                    <ul>
+                        <div class="vem">O que vem neste serviço:</div>
+                        <li>
+                            1 DG M+16
+                        </li>
+                        <li>
+                            Gear 467 no fim da dungeon
+                        </li>
+                        <li>
+                            Gear 476 no bau semanal
+                        </li>
+                        <li>
+                            Brasão Onírico do Aspecto
+                        </li>
+
+                    </ul>
+                    <div class="botao2">
+                        <a href="#contact"
+                            style="text-decoration: none; color: inherit; display: flex; align-items: center;"
+                            class="card-button">Mais Detalhes</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!---------------------------->
+
+    </div>
+    </div>
+    <!-- ... Código anterior ... -->
+
+    <div class="about-section" id="about">
+        <h2 class="about-text">Quem somos</h2>
+        <div class="about-content">
+            <img src="https://static.icy-veins.com/images/wow/og-images/shadowlands-mythic-season-1.jpg" alt="Sobre">
+            <p class="about-description"> Somos um grupo de jogadores
+                veteranos de World of Warcraft que não apenas amam
+                o jogo, mas também têm uma profunda compreensão das M+.
+                Nossa equipe é composta por jogadores talentosos
+                e dedicados
+                , muitos dos quais têm anos de experiência no mais alto
+                nível de jogabilidade.</p>
+
+        </div>
+    </div>
+
+    <!----Seção de Dúvidas-->
+    <div class="Duvidas" id="faq">
+        <div class="duvidas-descriçao">
+            <h2>Dúvidas Frequentes</h2>
+            <ul>
+                <li class="faq-item" data-active>
+                    <button class="faq-button">Como funciona o
+                        site?</button>
+                    <div class="faq-answer">
+                        Atualmente, o nosso site opera mais como um catálogo
+                        que é frequentemente atualizado. Aqui, você
+                        pode se informar sobre os serviços que oferecemos.
+                        Se você estiver interessado em comprar algum
+                        serviço, basta entrar em contato via
+                        <span style="color: blue;"><a href="link-do-Discord" target="_blank"
+                                style="text-decoration: none; color: blue;">Discord</a></span>
+                        ou
+                        <span style="color: green;"><a href="https://wa.me/557799237302" target="_blank"
+                                style="text-decoration: none; color: green;">WhatsApp</a></span>.
+                        Também oferecemos alguns serviços
+                        personalizados e pacotes que variam de acordo com as
+                        semanas e as necessidades dos clientes.
+                        Entre
+                        em contato para obter mais informações.
+                    </div>
+
+                </li>
+                <li class="faq-item">
+                    <button class="faq-button">Como funciona o serviço de
+                        Boosting no WoW?</button>
+                    <div class="faq-answer">
+                        Após efetuar o pedido e o pagamento, nós o
+                        executamos conforme solicitado, seja com um jogador
+                        de
+                        nossa equipe ou você mesmo jogando. Dessa forma,
+                        você economiza tempo, permitindo que você faça
+                        as
+                        atividades que mais gosta no jogo, sem a necessidade
+                        de lidar com jogadores aleatórios ou
+                        qualquer
+                        coisa do tipo. Deixe o trabalho pesado conosco 😊.
+                    </div>
+                </li>
+
+                <li class="faq-item">
+                    <button class="faq-button">Eu quero fazer um pedido
+                        grande para mim ou para minha guilda ou amigos,
+                        consigo algum
+                        desconto?</button>
+                    <div class="faq-answer">
+                        Claro! Você pode contar com descontos generosos
+                        sempre que escolher nossos serviços. Garantimos
+                        segurança e preços acessíveis.
+                    </div>
+                </li>
+
+                <li class="faq-item">
+                    <button class="faq-button">Armor Stack e Chaves
+                        Específicas:</button>
+                    <div class="faq-answer">
+                        Em todos os nossos serviços, o valor da chave junto
+                        com o Armor Stack está incluído... (não
+                        aplicável para o início da temporada).
+                        Armor Stack é simplesmente a maior quantidade de
+                        pessoas com o mesmo tipo de armadura no mesmo
+                        grupo. No caso de placas e couro, serão 5 jogadores
+                        em uma M+, enquanto tecido e malha serão
+                        apenas
+                        4, já que, até o momento, não existem tanques de
+                        tecido ou malha.
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-button">Quais métodos de pagamento
+                        vocês aceitam?</button>
+                    <div class="faq-answer">
+                        Trabalhamos com a plataforma do Mercado Pago,
+                        portanto, aceitamos cartões de crédito ou débito,
+                        assim como PIX.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!---Seção de Coach-->
+    <div class="coach" id="segu">
+
+        <h2 class=textoh2 style="font-weight: 100;">End Gear Coach</h2>
+
+        <div class="segurança">
+            <div class="coluna">
+                <p><span class="icone"><i class="fas fa-shield"></i></span>PRO
+                    players no time de suporte</p>
+                <p><span class="icone"><i class="fas fa-users"></i></span>Nosso
+                    próprio time de boost</p>
+                <p><span class="icone"><i class="fas fa-lock"></i></span>Proteção
+                    VPN</p>
+            </div>
+            <div class="coluna">
+                <p><span class="icone"><i class="fas fa-play"></i></span>Vamos
+                    começar o seu pedido assim que
+                    você estiver disponível</p>
+                <p><span class="icone"><i class="fas fa-gamepad"></i></span>Nós
+                    tryhardamos para que você
+                    disfrute do jogo</p>
+            </div>
+            <div class="coluna">
+                <ul>
+                    <li><span class="check-icon">&#10004;</span> Garantida
+                        uma comunicação educada e
+                        profissional com os gerentes da plataforma e dos
+                        jogadores envolvidos</li>
+                    <li><span class="check-icon">&#10004;</span> Suporte 24
+                        horas por dia, 7 dias por semana e
+                        resolva quaisquer problemas que possam surgir de
+                        forma rápida e profissional</li>
+                    <li><span class="check-icon">&#10004;</span> Os dados
+                        pessoais dos clientes estão protegidos
+                    </li>
+                    <li><span class="check-icon">&#10004;</span> Disfrute ao
+                        máximo, colaborando conosco!
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!---Seção de Contatos-->
+    <div class="contact-section" id="contact">
+
+        <!-- Ícones de contato aqui -->
+        <div class="contact-icons">
+            <h2>Entre em contato conosco</h2>
+            <div> <a href="seu-site-aqui" class="contact-text">Discord</span>
+                    <a href="seu-site-aqui" target="_blank">
+                        <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-7-1.png"
+                            alt="Discord">
+                    </a>
+            </div>
+            <div> <a href="https://wa.me/557799237302" class="contact-text">WhatsApp</span>
+                    <a href="https://wa.me/557799237302" target="_blank">
+                        <img src="https://imagepng.org/whatsapp-icone-icon/whatsapp-icone-2/" alt="WhatsApp">
+                    </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="flex: 1;"></div>
+
+    <!-- Rodapé (inicialmente oculto) -->
+    <footer id="page-footer">
+        <script>
+            // Obtém a data atual
+            var dataAtual = new Date();
+    
+            // Obtém o ano atual
+            var anoAtual = dataAtual.getFullYear();
+    
+            // Atualiza o conteúdo do footer com o ano atual
+            document.getElementById("page-footer").innerHTML = "&copy; " + anoAtual;
+        </script>
+    </footer>
+
+    <button id="voltar-ao-topo"><span class="material-symbols-outlined">
+            stat_2
+        </span></button> <!-- Ícone de seta para cima -->
+
+    <!---Código para botão de voltar ao início-->
+    <script>
+        const button = document.getElementById('voltar-ao-topo');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        });
+
+        button.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+    </script>
+
+    <!---Código para transição de rodapé/footer-->
+    <script>
+        window.addEventListener('scroll', function () {
+            var scrollHeight = document.documentElement.scrollHeight;
+            var scrollTop = window.scrollY;
+            var clientHeight = window.innerHeight;
+
+            // Verifica se o usuário está perto do final da página
+            if (scrollHeight - scrollTop <= clientHeight + 40) {
+                // Mostra o rodapé suavemente
+                document.getElementById('page-footer').style.bottom = '0';
+            } else {
+                // Oculta o rodapé suavemente
+                document.getElementById('page-footer').style.bottom = '-40px';
+            }
+        });
+    </script>
+
+    <!---Código para transição dos cartões-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll(".card");
+
+            cards.forEach((card, index) => {
+                setTimeout(function () {
+                    card.classList.add("show");
+                }, (index + 1) * 250); // Atraso de 1 segundo para cada cartão (ajuste conforme desejado)
+            });
+        });
+    </script>
+
+    <script>
+        // Animações de scroll na parte do SOBRE NÒS
+        ScrollReveal().reveal('.about-text', { delay: 750 });
+        ScrollReveal().reveal('.about-content', { delay: 1000 });
+        ScrollReveal().reveal('about-description', { delay: 1250 });
+        // Animações de scroll na parte da segurança
+        ScrollReveal().reveal('.coach', { delay: 750 });
+        ScrollReveal().reveal('.textoh2', { delay: 1000 });
+        ScrollReveal().reveal('.segurança', { delay: 1250 });
+        // Animações de scroll na parte das dúvidas
+        ScrollReveal().reveal('.duvidas-descriçao h2', { delay: 750 });
+        ScrollReveal().reveal('.duvidas-descriçao li', { delay: 1000 });
+
+
+    </script>
+
+    <!---Código para animação do botao hamburguer-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const menuContainer = document.getElementById("menu-container");
+
+            menuToggle.addEventListener("click", function () {
+                menuToggle.classList.toggle("active"); // Alternar classe para animação do botão
+                menuContainer.classList.toggle("active"); // Alternar classe para mostrar/ocultar o menu
+            });
+        });
+
+    </script>
+
+    <!---Código para transição no scroll-->
+    <script>
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector(".scroll-header");
+
+            if (window.scrollY > 100) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+
+
+    </script>
+
+    <!--Botao duvidas-->
+    <script>
+        const faqButtons = document.querySelectorAll('.faq-button');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
